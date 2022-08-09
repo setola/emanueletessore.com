@@ -1,0 +1,63 @@
+configDir: "config/"
+baseURL: 'https://doc.emanueletessore.com/'
+languageCode: 'en-us'
+title: 'Emanuele Tessore'
+theme: 'hugo-coder'
+disqusShortname: emanueletessore
+params:
+  author: "Emanuele Tex Tessore"
+  description: "IT experiments, documentation, troubleshooting and howto"
+  avatar: "/spaceinvaders-videogames.gif"
+  avatarurl: "/spaceinvaders-videogames.gif"
+  gravatar: setola@gmail.com
+  menu_item_separator: " - "
+  favicon: "/favicon.ico"
+  social:
+    - name: "Github"
+      url: "https://github.com/setola"
+      icon: "fa fa-github fa-2x github"
+      weight: 10
+    - name: "Linkedin"
+      icon: "fa fa-linkedin fa-2x linkedin"
+      url: "https://www.linkedin.com/in/emanuele-tessore-02706924/"
+      weight: 20
+    - name: "bitbucket"
+      icon: "fa fa-bitbucket fa-2x"
+      url: "https://bitbucket.org/setola/"
+      weight: 30
+    - name: "mail"
+      icon: "fa fa-envelope fa-2x"
+      url: "mailto:me@emanueletessore.com"
+      weight: 40
+    - name: "telegram"
+      icon: "fa fa-telegram fa-2x telegram"
+      url: "https://telegram.me/Setola"
+      weight: 50
+    - name: "whatsapp"
+      icon: "fa fa-whatsapp fa-2x whatsapp"
+      url: "https://wa.me/+393934227139"
+      weight: 60
+
+  info: "Make the world a better place, one line of code at time!"
+
+  favicon_32: "/img/favicon-32x32.png"
+  favicon_16: "/img/favicon-16x16.png"
+
+  since: 2009
+
+  enableTwemoji: true
+
+  colorScheme: "dark"
+  hidecolorschemetoggle: false
+# Menu links
+menu:
+  main:
+    - name: About
+      weight: 10
+      url: /about/
+    - name: Documentation
+      weight: 20
+      url: https://doc.emanueletessore.com
+    - name: Resume
+      weight: 30
+      url: https://cv.emanueletessore.com
