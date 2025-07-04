@@ -1,0 +1,77 @@
+version: "3"
+
+dotenv:
+  - .env
+
+tasks:
+  default:
+    desc: Show available tasks
+    cmds:
+      - task --list
+
+  hugo:
+    desc: Run Hugo commands
+    cmds:
+      - docker run
+        --rm
+        --name hugo
+        --user $(id -u):$(id -g)
+        --publish 1313:1313
+        --volume .:/src
+        --workdir /src/src/emanueletessore.com
+        --env HUGO_THEME
+        ${HUGO_IMAGE}
+        {{.CLI_ARGS}}
+
+  hugo:serve:
+    desc: Start Hugo development server
+    cmds:
+      - task: hugo
+        vars:
+          CLI_ARGS: server --bind 0.0.0.0
+
+  hugo:serve-drafts:
+    desc: Start Hugo development server including drafts
+    cmds:
+      - task: hugo
+        vars:
+          CLI_ARGS: server --bind 0.0.0.0 --buildDrafts --buildFuture
+
+  hugo:build:
+    desc: Build static site for production
+    cmds:
+      - task: hugo
+        vars:
+          CLI_ARGS: build
+
+  hugo:lint:
+    desc: Lint Hugo configuration and content
+    cmds:
+      - task: hugo
+        vars:
+          CLI_ARGS: check
+
+  clean:
+    desc: Clean generated files
+    cmds:
+      - find src/ -maxdepth 2 -name public -o -name resources -type d -exec rm -rf {} +
+
+  update-theme:
+    desc: Update theme to latest version
+    cmds:
+      - git submodule update --remote themes/{{.THEME_NAME}}
+
+  new-post:
+    desc: Create a new blog post
+    cmds:
+      - docker-compose run --rm hugo new content/docs/{{.CLI_ARGS}}.md
+
+  shell:
+    desc: Open shell in Hugo container
+    cmds:
+      - docker-compose run --rm --entrypoint sh hugo
+
+  stop:
+    desc: Stop all services
+    cmds:
+      - docker rm -f hugo || true

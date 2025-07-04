@@ -1,13 +1,23 @@
-### Hugo template
-# Generated files by hugo
-/src/*/public/
-/src/*/resources/_gen/
+# Hugo
+public/
+resources/
+.hugo_build.lock
 
-# Executable may be added to repository
-hugo.exe
-hugo.darwin
-hugo.linux
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
 
-/src/*/.hugo_build.lock
-### PHPStorm config
-.idea
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+
+src/**/node_modules/

@@ -1,17 +1,71 @@
-configDir: "config/"
-baseURL: 'https://doc.emanueletessore.com/'
-languageCode: 'en-us'
-title: 'Emanuele Tessore'
-theme: 'hugo-coder'
-disqusShortname: emanueletessore
+baseURL: https://www.emanueletessore.com
+languageCode: en-us
+title: Emanuele Tessore
+theme: careercanvas
+enableRobotsTXT: true
+enableGitInfo: true
+enableEmoji: true
+summaryLength: 30
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    style: github
+    lineNos: true
+    noClasses: false
+menu:
+  main:
+    - name: Home
+      url: /
+      weight: 10
+    - name: About
+      url: /#about
+      weight: 20
+    - name: Skills
+      url: /#skills
+      weight: 30
+    - name: Experience
+      url: /#experience
+      weight: 40
+    - name: Techstack
+      url: /#techstack
+      weight: 50
+    - name: Contact
+      url: /#contact
+      weight: 60
+    - name: Projects
+      url: /projects/
+      weight: 70
+    - name: Docs
+      url: /docs/
+      weight: 80
 params:
-  author: "Emanuele Tex Tessore"
-  description: "IT experiments, documentation, troubleshooting and howto"
-  avatar: "/spaceinvaders-videogames.gif"
-  avatarurl: "/spaceinvaders-videogames.gif"
-  gravatar: setola@gmail.com
-  menu_item_separator: " - "
-  favicon: "/favicon.ico"
+  author: Emanuele Tessore
+  profile_image: /images/emanuele-tex-tessore.png
+  fourofour_image: /images/404-afraid.png
+  tagline: DevOps, WebDev & Tech Enthusiast
+  description: Make the world a better place, one line of code at a time!
+  keywords:
+    - DevOps
+    - Web Developer
+    - Kubernetes
+    - Linux
+    - Open Source
+    - Tech
+  name: Emanuele Tessore
+  nickname: Tex / Setola
+  profession: DevOps Engineer
+  location: Venice, Italy
+  hero_description: >
+    Make the world a better place, one line of code at a time!
+  hero_location: Venice, Italy
+  email: me@emanueletessore.com
+  formspree_endpoint: https://formspree.io/f/mqabozwr
+  github_url: https://github.com/setola
+  github_text: Setola on Github
+  resume_url_en: https://www.emanueletessore.com/resume-en.pdf
+  resume_label: Resume
   social:
     - name: "Github"
       url: "https://github.com/setola"
@@ -25,10 +79,6 @@ params:
       icon: "fa fa-bitbucket fa-2x"
       url: "https://bitbucket.org/setola/"
       weight: 30
-    - name: "mail"
-      icon: "fa fa-envelope fa-2x"
-      url: "mailto:me@emanueletessore.com"
-      weight: 40
     - name: "telegram"
       icon: "fa fa-telegram fa-2x telegram"
       url: "https://telegram.me/Setola"
@@ -37,27 +87,62 @@ params:
       icon: "fa fa-whatsapp fa-2x whatsapp"
       url: "https://wa.me/+393934227139"
       weight: 60
+  collab_tags:
+    - DevOps Manager
+    - Cybersecurity Specialist
+    - Cloud Architect
+    - IT Consultant
+    - R&D and Innovation
+    - Kubernetes Expert
+    - Open Source Advocate
+    - Automation Specialist
+  hero:
+    title: Hi! I'm Emanuele
+    subtitle: but everybody calls me Tex or Setola
+    description:
+      I'm a DevOps engineer, I was a web developer and I'll forever be a
+      tech enthusiast.
+    image: /images/profile.jpg
+  about:
+    title: About Me
+    description: >
+      I've started developing applications in academia, in early 2000, with
+      languages like C++ and Java.
 
-  info: "Make the world a better place, one line of code at time!"
+      I've always been fascinated by the potential of the Internet, a passion that led me to face either technical or design and marketing topics.
 
-  favicon_32: "/img/favicon-32x32.png"
-  favicon_16: "/img/favicon-16x16.png"
+      I also developed a strong interest in automation and interactions between technology and the physical world while exploring micro-controllers, IoT and CNC stuff.
 
-  since: 2009
+      Technology not only is the key point of my professional career, but it's also my oldest hobby and of course one passion that takes me over the years.
 
-  enableTwemoji: true
-
-  colorScheme: "dark"
-  hidecolorschemetoggle: false
-# Menu links
-menu:
-  main:
-    - name: About
-      weight: 10
-      url: /about/
-    - name: Documentation
-      weight: 20
-      url: https://doc.emanueletessore.com
-    - name: Resume
-      weight: 30
-      url: https://cv.emanueletessore.com
+      I like Linux, OpenSource, Arduino and Raspberry PI, Kubernetes, motorbikes and drums.
+outputs:
+  home:
+    - HTML
+    - JSON
+    - RSS
+  section:
+    - HTML
+    - JSON
+build:
+  writeStats: true
+security:
+  enableInlineShortcodes: false
+  exec:
+    allow:
+      - ^(dart-)?sass(-embedded)?$
+      - ^go$
+      - ^npx$
+      - ^postcss$
+      - git
+    osEnv:
+      - (?i)^((HTTPS?|NO)_PROXY|PATH(EXT)?|APPDATA|TE?MP|TERM|GO\w+|(XDG_)?CACHE_HOME|YARN_CACHE_FOLDER)$
+  funcs:
+    getenv:
+      - ^HUGO_
+      - ^CI$
+  http:
+    methods:
+      - (?i)GET|POST
+    urls:
+      - .*

@@ -1,3 +1,3 @@
-[submodule "src/emanueletessore.com/themes/hugo-coder"]
-	path = src/emanueletessore.com/themes/hugo-coder
-	url = https://github.com/luizdepra/hugo-coder.git
+[submodule "src/emanueletessore.com/themes/careercanvas"]
+	path = src/emanueletessore.com/themes/careercanvas
+	url = https://github.com/felipecordero/careercanvas.git

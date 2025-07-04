@@ -1,5 +1,5 @@
-DOCKER_IMAGE="klakegg/hugo:latest"
-DOCKER_IMAGE_CONSOLE="klakegg/hugo:alpine"
+DOCKER_IMAGE="hugomods/hugo:latest"
+DOCKER_IMAGE_CONSOLE="hugomods/hugo:debian"
 DIR="${PWD}/src"
 BUILD_DIR=./build
 THEME=even
