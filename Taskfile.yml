@@ -51,6 +51,18 @@ tasks:
         vars:
           CLI_ARGS: check
 
+  npm:
+    desc: Run npm commands
+    cmds:
+      - docker run
+        --rm
+        --name npm
+        --user $(id -u):$(id -g)
+        --volume .:/src
+        --workdir /src/src/emanueletessore.com
+        node
+        npm {{.CLI_ARGS}}
+
   clean:
     desc: Clean generated files
     cmds:
