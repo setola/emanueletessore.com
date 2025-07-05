@@ -25,14 +25,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@main
       - uses: docker-practice/actions-setup-docker@master
       - name: build html
         run: make
       - name: Setup Pages
-        uses: actions/configure-pages@v1
+        uses: actions/configure-pages@main
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@main
         with:
           path: './src/emanueletessore.com/public'
       - name: Deploy to GitHub Pages
