@@ -29,7 +29,7 @@ jobs:
           uses: actions/checkout@main
         - uses: addnab/docker-run-action@main
           with:
-            image: hugomods/hugo:debian-ci-non-root
+            image: hugomods/hugo:debian-ci
             options: -v ${{ github.workspace }}:/src -w /src/src/emanueletessore.com
             run: |
               npm ci && hugo build
