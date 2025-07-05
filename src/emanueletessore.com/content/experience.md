@@ -1,6 +1,7 @@
 ---
 title: Experience
 type: homepage
+headless: true
 intro: >-
   Automating evolution from Web Developer to Cloud Architect through security and performance monitoring.
 

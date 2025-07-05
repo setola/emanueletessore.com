@@ -54,22 +54,12 @@ tasks:
   clean:
     desc: Clean generated files
     cmds:
-      - find src/ -maxdepth 2 -name public -o -name resources -type d -exec rm -rf {} +
+      - rm -fr src/emanueletessore.com/public/
 
   update-theme:
     desc: Update theme to latest version
     cmds:
-      - git submodule update --remote themes/{{.THEME_NAME}}
-
-  new-post:
-    desc: Create a new blog post
-    cmds:
-      - docker-compose run --rm hugo new content/docs/{{.CLI_ARGS}}.md
-
-  shell:
-    desc: Open shell in Hugo container
-    cmds:
-      - docker-compose run --rm --entrypoint sh hugo
+      - git submodule update --init --recursive
 
   stop:
     desc: Stop all services

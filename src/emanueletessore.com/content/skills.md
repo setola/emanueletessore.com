@@ -1,6 +1,7 @@
 ---
 title: "Skills"
 type: "homepage"
+headless: true
 intro: >-
   Combining 25+ years of IT expertise with modern DevOps strategies and expanding into Cyber Security.
 

@@ -1,6 +1,7 @@
 ---
 title: Technical Skills
 type: homepage
+headless: true
 intro: >-
   Some of the tech stack I use for software development, DevOps and ITOps.
 

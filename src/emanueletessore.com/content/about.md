@@ -1,6 +1,7 @@
 ---
 title: "About"
 type: "homepage"
+headless: true
 quickfacts:
   - icon: "briefcase"
     title: "Current Role"
