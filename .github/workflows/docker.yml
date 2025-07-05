@@ -27,9 +27,9 @@ jobs:
     steps:
         - name: Checkout 
           uses: actions/checkout@main
-        - run: pwd && ls -lh && id
-        - run: mkdir -p src/emanueletessore.com/node_modules
-        - run: docker run --user $(id -u):$(id -g) --rm --volume ${{ github.workspace }}:/src --workdir /src/src/emanueletessore.com hugomods/hugo:debian-ci-non-root npm ci
+        - uses: actions/setup-node@main
+        - run: cd src/emanueletessore.com/ npm ci
+        - run: pwd && ls -lh src/emanueletessore.com
         - run: docker run --user $(id -u):$(id -g) --rm --volume ${{ github.workspace }}:/src --workdir /src/src/emanueletessore.com hugomods/hugo:debian-ci-non-root build
         - name: Setup Pages
           uses: actions/configure-pages@main
