@@ -55,6 +55,8 @@ tasks:
     desc: Clean generated files
     cmds:
       - rm -fr src/emanueletessore.com/public/
+      - rm -fr src/emanueletessore.com/resources/
+      - rm -fr src/emanueletessore.com/node_modules/
 
   update-theme:
     desc: Update theme to latest version
