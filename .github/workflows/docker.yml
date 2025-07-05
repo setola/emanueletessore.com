@@ -1,5 +1,4 @@
 name: Makefile CI
-
 on:
   push:
     branches: [ main ]
@@ -23,22 +22,36 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
-
     steps:
-        - name: Checkout 
-          uses: actions/checkout@main
-          with:
-            submodules: recursive
-        - name: Install dependencies
-          run: docker run --user $(id -u):$(id -g) --rm --volume ${{ github.workspace }}:/src --workdir /src/src/emanueletessore.com hugomods/hugo:debian-ci-non-root npm install
-        - name: Building static site
-          run: docker run --user $(id -u):$(id -g) --rm --volume ${{ github.workspace }}:/src --workdir /src/src/emanueletessore.com hugomods/hugo:debian-ci-non-root build
-        - name: Setup Pages
-          uses: actions/configure-pages@main
-        - name: Upload artifact
-          uses: actions/upload-pages-artifact@main
-          with:
-            path: './src/emanueletessore.com/public'
-        - name: Deploy to GitHub Pages
-          id: deployment
-          uses: actions/deploy-pages@main
+      - name: Checkout
+        uses: actions/checkout@main
+        with:
+          submodules: recursive
+      
+      - name: Install dependencies
+        run: |
+          docker run --rm \
+            --volume ${{ github.workspace }}:/src \
+            --workdir /src/src/emanueletessore.com \
+            hugomods/hugo:debian-ci-non-root \
+            bash -c "npm config set cache /tmp/.npm && npm install"
+      
+      - name: Building static site
+        run: |
+          docker run --rm \
+            --volume ${{ github.workspace }}:/src \
+            --workdir /src/src/emanueletessore.com \
+            hugomods/hugo:debian-ci-non-root \
+            build --destination public --minify --gc --cleanDestinationDir
+      
+      - name: Setup Pages
+        uses: actions/configure-pages@main
+      
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@main
+        with:
+          path: './src/emanueletessore.com/public'
+      
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@main
