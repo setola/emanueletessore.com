@@ -30,7 +30,7 @@ jobs:
         - uses: addnab/docker-run-action@main
           with:
             image: hugomods/hugo:debian-ci
-            options: -v ${{ github.workspace }}:/src -w /src/src/emanueletessore.com -u $(id -u):$(id -g)
+            options: -v ${{ github.workspace }}:/src -w /src/src/emanueletessore.com -u $(id -u)
             run: npm ci && hugo build
         - name: Setup Pages
           uses: actions/configure-pages@main
