@@ -16,9 +16,9 @@ markup:
     noClasses: false
 menu:
   main:
-    - name: Home
-      url: /
-      weight: 10
+    # - name: Home
+    #   url: /
+    #   weight: 10
     - name: About
       url: /#about
       weight: 20
@@ -34,11 +34,13 @@ menu:
     - name: Contact
       url: /#contact
       weight: 60
-    - name: Projects
-      url: /projects/
-      weight: 70
+    # - name: Projects
+    #   url: /projects/
+    #   weight: 70
     - name: Docs
-      url: /docs/
+      # url: /docs/
+      url: https://doc.emanueletessore.com
+      target: _blank
       weight: 80
 params:
   author: Emanuele Tessore
@@ -64,7 +66,7 @@ params:
   formspree_endpoint: https://formspree.io/f/mqabozwr
   github_url: https://github.com/setola
   github_text: Setola on Github
-  resume_url_en: https://www.emanueletessore.com/resume-en.pdf
+  resume_url_en: https://cv.emanueletessore.com/
   resume_label: Resume
   social:
     - name: "Github"
