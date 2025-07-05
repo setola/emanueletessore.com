@@ -28,13 +28,17 @@ jobs:
         with:
           submodules: recursive
       
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+          cache-dependency-path: './src/emanueletessore.com/package-lock.json'
+      
       - name: Install dependencies
         run: |
-          docker run --rm \
-            --volume ${{ github.workspace }}:/src \
-            --workdir /src/src/emanueletessore.com \
-            hugomods/hugo:debian-ci-non-root \
-            bash -c "npm config set cache /tmp/.npm && npm install"
+          cd ${{ github.workspace }}/src/emanueletessore.com
+          npm ci
       
       - name: Building static site
         run: |
@@ -42,7 +46,7 @@ jobs:
             --volume ${{ github.workspace }}:/src \
             --workdir /src/src/emanueletessore.com \
             hugomods/hugo:debian-ci-non-root \
-            build --destination public --minify --gc --cleanDestinationDir
+            hugo
       
       - name: Setup Pages
         uses: actions/configure-pages@main
