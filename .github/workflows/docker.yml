@@ -27,11 +27,10 @@ jobs:
     steps:
         - name: Checkout 
           uses: actions/checkout@main
-        - uses: addnab/docker-run-action@main
-          with:
-            image: hugomods/hugo:debian-ci
-            options: -v ${{ github.workspace }}:/src -w /src/src/emanueletessore.com -u $(id -u)
-            run: npm ci && hugo build
+        - run: pwd && ls -lh
+        - run: docker run --user $(id -u):$(id -g) --rm hello-world
+        - run: docker run --user $(id -u):$(id -g) --rm --volume ${{ github.workspace }}:/src --workdir /src/src/emanueletessore.com hugomods/hugo:debian-ci-non-root npm ci
+        - run: docker run --user $(id -u):$(id -g) --rm --volume ${{ github.workspace }}:/src --workdir /src/src/emanueletessore.com hugomods/hugo:debian-ci-non-root build
         - name: Setup Pages
           uses: actions/configure-pages@main
         - name: Upload artifact
