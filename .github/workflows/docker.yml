@@ -28,7 +28,7 @@ jobs:
         - name: Checkout 
           uses: actions/checkout@main
         - uses: actions/setup-node@main
-        - run: cd src/emanueletessore.com/ npm ci
+        - run: ( cd src/emanueletessore.com/ && npm ci )
         - run: pwd && ls -lh src/emanueletessore.com
         - run: docker run --user $(id -u):$(id -g) --rm --volume ${{ github.workspace }}:/src --workdir /src/src/emanueletessore.com hugomods/hugo:debian-ci-non-root build
         - name: Setup Pages
