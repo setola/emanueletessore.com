@@ -40,13 +40,16 @@ jobs:
           cd ${{ github.workspace }}/src/emanueletessore.com
           npm ci
       
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: 'latest'
+          extended: true
+      
       - name: Building static site
         run: |
-          docker run --rm \
-            --volume ${{ github.workspace }}:/src \
-            --workdir /src/src/emanueletessore.com \
-            hugomods/hugo:debian-ci-non-root \
-            hugo
+          cd ${{ github.workspace }}/src/emanueletessore.com
+          hugo
       
       - name: Setup Pages
         uses: actions/configure-pages@main
