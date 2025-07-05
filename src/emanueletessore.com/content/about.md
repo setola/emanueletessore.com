@@ -1,20 +1,44 @@
 ---
-title: "Welcome"
-draft: false
-disqus: false
-disable_comments: true
+title: "About"
+type: "homepage"
+headless: true
+quickfacts:
+  - icon: "briefcase"
+    title: "Current Role"
+    value: "DevOps Manager at <a href=\"https://dmind.it\" target=\"_blank\" rel=\"noopener noreferrer\"><strong>DMIND</strong></a>"
+  - icon: "language"
+    title: "Languages"
+    value: "English (Advanced), Italian (Native)"
+  - icon: "heart"
+    title: "Interests"
+    value: "Cooking, Drumming, Motorbike, Gamer"
 ---
 
-I am **Emanuele Tessore**, a **web designer**, an **IT developer** and definitely a **tech enthusiast**.  
-This website is about my life, my work and my hobbies.  
-I hope you will find something interesting here!
 
-Some of my greatest tech interest are **PHP**, **JavaScript**, **WordPress**, **Arduino**, **Android**, but generally i
-like everything has more than 10 transistors in it or you can write code for it.  
-Actually I’m working as a **Dev-Ops** in a **communication agency** based in **Venice, Italy**.
+Hi! my name is **Emanuele** but everybody calls me **Tex** or **Setola**, 
+I'm a **DevOps Manager** and **System Architect** with a particular 
+focus on **Cyber Security**; I was a **Web Developer** and an **IT Manager**.
 
-If you’re interested in my professional career you can take a look on
-my [resume](https://cv.emanueletessore.com/ "Emanuele Tessore - IT developer - Resume").  
 
-This is not only my personal website, but also my code playground… where I test alpha code and things that can go boom…
-so if you notice any issue feel free to contact me.
+I've started developing applications in early 2000, with languages like **C++** and **Java**. 
+Then I've followed the web standard with **PHP** and **Node**, with a little trip to **GoLang**.
+
+{{< heads-up 
+  title="What I'm passionate about" >}}
+  Technology is both the key point of my professional career 
+  and my oldest hobby and of course one **passion** that takes me over the years.
+  
+  I like **Linux**, **OpenSource**, **Arduino** and **Raspberry PI** and **Kubernetes**
+{{< /heads-up >}}
+
+
+I've always been fascinated by the potential of the Internet, a passion that led me to face **either technical** or **design and marketing** topics.
+
+
+I also developed a strong interest in **automation** and technology interactions with the physical world while exploring micro-controllers, IoT and CNC stuff
+
+
+Outside work, I enjoy **riding my motorbike**, **cooking**, **playing drums** and **tactical games**. 
+
+
+I also volunteer at NGI and GamesNet online communities helping managing games server and forums.
