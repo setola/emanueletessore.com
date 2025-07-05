@@ -29,10 +29,10 @@ jobs:
           uses: actions/checkout@main
           with:
             submodules: recursive
-        - uses: actions/setup-node@main
-        - run: ( cd src/emanueletessore.com/ && npm install )
-        - run: docker run --user $(id -u):$(id -g) --rm --volume ${{ github.workspace }}:/src --workdir /src/src/emanueletessore.com hugomods/hugo:debian-ci-non-root build
-        - run: ls -la src/emanueletessore.com/public
+        - name: Install dependencies
+          run: docker run --user $(id -u):$(id -g) --rm --volume ${{ github.workspace }}:/src --workdir /src/src/emanueletessore.com hugomods/hugo:debian-ci-non-root npm install
+        - name: Building static site
+          run: docker run --user $(id -u):$(id -g) --rm --volume ${{ github.workspace }}:/src --workdir /src/src/emanueletessore.com hugomods/hugo:debian-ci-non-root build
         - name: Setup Pages
           uses: actions/configure-pages@main
         - name: Upload artifact

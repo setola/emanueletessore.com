@@ -54,14 +54,9 @@ tasks:
   npm:
     desc: Run npm commands
     cmds:
-      - docker run
-        --rm
-        --name npm
-        --user $(id -u):$(id -g)
-        --volume .:/src
-        --workdir /src/src/emanueletessore.com
-        node
-        npm {{.CLI_ARGS}}
+      - task: hugo
+        vars:
+          CLI_ARGS: npm {{.CLI_ARGS}}
 
   clean:
     desc: Clean generated files
