@@ -11,9 +11,22 @@ markup:
     renderer:
       unsafe: true
   highlight:
-    style: github
-    lineNos: true
-    noClasses: false
+    style: github-dark
+    lineNos: false
+    # noClasses: false
+    anchorLineNos: true
+    codeFences: true
+    guessSyntax: false
+    hl_Lines: ""
+    hl_inline: false
+    lineAnchors: "line"
+    lineNoStart: 1
+    # lineNos: false
+    lineNumbersInTable: true
+    noClasses: true
+    # style: monokai
+    tabWidth: 2
+    wrapperClass: highlight
 menu:
   main:
     # - name: Home
@@ -38,9 +51,7 @@ menu:
     #   url: /projects/
     #   weight: 70
     - name: Docs
-      # url: /docs/
-      url: https://doc.emanueletessore.com
-      target: _blank
+      url: /docs/
       weight: 80
 params:
   author: Emanuele Tessore
