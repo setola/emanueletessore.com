@@ -84,10 +84,10 @@ params:
       url: "https://github.com/setola"
       icon: "fa fa-github fa-2x github"
       weight: 10
-    - name: "Linkedin"
-      icon: "fa fa-linkedin fa-2x linkedin"
-      url: "https://www.linkedin.com/in/emanuele-tessore-02706924/"
-      weight: 20
+    # - name: "Linkedin"
+    #   icon: "fa fa-linkedin fa-2x linkedin"
+    #   url: "https://www.linkedin.com/in/emanuele-tessore-02706924/"
+    #   weight: 20
     - name: "bitbucket"
       icon: "fa fa-bitbucket fa-2x"
       url: "https://bitbucket.org/setola/"
