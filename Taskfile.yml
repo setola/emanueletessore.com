@@ -26,6 +26,10 @@ tasks:
   hugo:serve:
     desc: Start Hugo development server
     cmds:
+      - task: clean
+      - task: npm
+        vars:
+          CLI_ARGS: install
       - task: hugo
         vars:
           CLI_ARGS: server --bind 0.0.0.0
@@ -33,16 +37,20 @@ tasks:
   hugo:serve-drafts:
     desc: Start Hugo development server including drafts
     cmds:
-      - task: hugo
+      - task: hugo:serve
         vars:
           CLI_ARGS: server --bind 0.0.0.0 --buildDrafts --buildFuture
 
   hugo:build:
     desc: Build static site for production
     cmds:
+      - task: clean
+      - task: npm
+        vars:
+          CLI_ARGS: install
       - task: hugo
         vars:
-          CLI_ARGS: build
+          CLI_ARGS: build --environment production --destination public --minify
 
   hugo:lint:
     desc: Lint Hugo configuration and content

@@ -49,7 +49,7 @@ jobs:
       - name: Building static site
         run: |
           cd ${{ github.workspace }}/src/emanueletessore.com
-          hugo
+          hugo --environment production --destination public --minify
       
       - name: Setup Pages
         uses: actions/configure-pages@main
