@@ -1,4 +1,4 @@
-name: Makefile CI
+name: Hugo Deployment to GitHub Pages
 on:
   push:
     branches: [ main ]
