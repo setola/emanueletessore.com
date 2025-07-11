@@ -36,6 +36,10 @@ route-metric 50
 route-nopull
 ```
 
+You need to remove the *Automatic* checkbox from *Routes* and add ip or subnets to be reached using the VPN tunnel. 
+
+![OpenVPN Ubuntu Panel - disable automatic routes](ubuntu-openvpn-no-routes.png)
+
 ## Public IP
 
 Be sure to use a reachable IP as your *remote*
