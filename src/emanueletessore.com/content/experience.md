@@ -7,12 +7,13 @@ intro: >-
 
 positions:
   - company: DMIND
-    company_desc: >
-      DMIND is a multi-channel Communication Agency with a strategic consulting approach. 
-      We are an interdisciplinary team, organized in dedicated business units, 
-      capable of managing all communication assets on and off line.
+    company_description: >
+      Multi-channel Communication Agency with a strategic consulting approach and 
+      an interdisciplinary team capable of managing every communication assets.
     role: DevOps Manager
     period: Jun 2022 - Present
+    location: "Venice - Italy"
+    industry: "Communication Technology"
     bullet_points:
       - Leading DevOps initiatives, infrastructure automation, and cloud operations
       - Kubernetes cluster setup with K3D and K3S, management, optimization and monitoring
@@ -22,12 +23,12 @@ positions:
       - Design and development of CI/CD strategies for internal and external projects
 
   - company: DigitalMind
-    company_desc: >
-      DigitalMind is a multi-media Communication Agency: we take care of everithing 
-      from creativity to online and offline communication strategy and planning, 
-      including technical stuff for your online projects
+    company_description: >
+      A multimedia agency covering creativity, strategy, and technical execution for online and offline projects.
     role: Senior Backend Developer
     period: Sep 2018 - May 2022
+    location: "Venice - Italy"
+    industry: "Communication Technology"
     bullet_points:
       - Servers and network equipment management both on-prem and cloud
       - Debugging, troubleshooting, and optimizing code to ensure platform reliability
@@ -37,11 +38,12 @@ positions:
       - Developin tailor-made applications on customer requirements
 
   - company: Calicantus / WebMaori
-    company_desc: >
-      Calicantus offers a complete outsourcing solution for your e-commerce; 
-      from technology to strategy, logistic, storage and shop management.
+    company_description: >
+      A complete e-commerce outsourcing solution from technology and strategy to logistics, warehousing, and store management.
     role: Senior Backend Developer
     period: Sep 2016 - Sep 2018
+    location: "Venice - Italy"
+    industry: "E-Commerce"
     bullet_points:
     - Custom e-commerce platform development and maintenance
     - Two way ERP/e-commerce integration
@@ -50,11 +52,12 @@ positions:
     - Update and upgrade legacy code running on production environment
 
   - company: TSW
-    company_desc: >
-      T.S.W. is a web agency with a wide range of knowledge and experience 
-      in every aspect of digital marketing: from technical implementation to SEO and SEM strategies.
+    company_description: >
+      A web agency with broad expertise in all areas of digital marketing, from technical implementation to SEO and SEM strategy.
     role: Senior Web Developer
     period: Jun 2015 - Aug 2016
+    location: "Treviso - Italy"
+    industry: "Communication Technology"
     bullet_points:
       - Developing and maintaining websites
       - Research & Development of new technologies
@@ -66,12 +69,12 @@ positions:
       - Experience with Ansible for infrastructure orchestration and automation
 
   - company: FastBooking / D-Edge
-    company_desc: >
-      With an extensive array of cutting-edge e-commerce solutions on offer, FASTBOOKING brings the digital traveler to hotels’ doorstep.
-
-      They offer hoteliers tailor-made strategies and on-going expert advice, boosting their direct sales, improving their operating results and helping them get greater independence.
+    company_description: >
+      Hoteliers e-commerce solutions that connect digital travelers directly with hotels with tailored strategies and expert advice to boost sales and increase independence.
     role: Project Manager and Web Developer
     period: Sep 2010 - Jun 2015
+    location: "Paris - France"
+    industry: "Hospitality Technology"
     bullet_points:
       - Developing and maintaining websites
       - Research & Development of new products
@@ -82,9 +85,11 @@ positions:
       - Deep direct experience with WordPress API
   
   - company: CiTex
-    company_desc:
+    company_description:
     role: Co-Owner - CTO
     period: Sep 2008 - Sep 2018
+    location: "Turin - Italy"
+    industry: "Web Technology"
     bullet_points:
       - Developing and maintaining LAMP infrastructure and WordPress network with 30+ websites
       - WordPress plugins development
@@ -92,11 +97,12 @@ positions:
       - SEO and content for AdSense oriented blogs
 
   - company: Zip Progetti
-    company_desc: >
-      Communication Agency specialized in radio advertising with a press office 
-      delivering audio-visual contents about local news
+    company_description: >
+      Communication agency specialized in radio advertising, with a press office producing audio-visual content on local news.
     role: Technician / Audio Engeneer
     period: Sep 2004 - Sep 2008
+    location: "Turin - Italy"
+    industry: "Communication Technology"
     bullet_points:
       - Developing and maintaining of audio and video streaming equipment
       - Setup and configuration of web-radio software integrated with website
@@ -105,9 +111,11 @@ positions:
       - Producer and sound engineer
 
   - company: "MT-Lab.org"
-    company_desc:
+    company_description:
     role: associate
     period: 2000 - 2009
+    location: "Turin - Italy"
+    industry: "Technoculture"
     bullet_points:
       - Development, maintenance and SEO for websites and blogs
       - Linux Server admin
@@ -117,9 +125,11 @@ positions:
       - Technical organization for events such as LAN-parties and conferences.
 
   - company: NGI / GamesNet
-    company_desc:
+    company_description:
     role: volunteer
     period: 2000 - 2009
+    location: "Milan - Italy"
+    industry: "E-Gaming"
     bullet_points:
       - "Development and maintenance Gameservers Starsiege: Tribes"
       - Organization tournaments and LAN-party

@@ -1,43 +1,81 @@
-<section id="home" class="pt-24 pb-16 md:pt-32 md:pb-24 gradient-bg dark:gradient-bg-dark text-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="md:flex items-center">
-        <div class="md:w-1/2 mb-10 md:mb-0">
-          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 font-heading leading-tight">
-            {{ .Site.Params.name }}
-          </h1>
-          <h2 class="text-2xl md:text-3xl mb-6">
-            {{ .Site.Params.tagline }}
-          </h2>
-          <p class="text-lg mb-8 max-w-lg">
-            {{ .Site.Params.hero_description }}
-          </p>
-          <div class="flex space-x-4">
-            <a href="#contact" class="border-2 border-white text-white px-6 py-3 rounded-lg font-medium hover:bg-white hover:text-blue-600 dark:hover:text-blue-400 transition duration-300">Get in Touch</a>
-            <a href="{{ .Site.Params.resume_url_en }}" target="_blank" rel="noopener" class="bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition duration-300">{{ .Site.Params.resume_label }}</a>
-          </div>
-          <!-- Social Media Icons -->
-          {{/*  <div class="flex space-x-6 mt-6">
-            <a href="{{ .Site.Params.linkedin_url }}" target="_blank" rel="noopener noreferrer" class="text-white hover:text-blue-200 transition duration-300">
-              <i class="fab fa-linkedin-in text-3xl"></i>
-            </a>
-            <a href="{{ .Site.Params.github_url }}" target="_blank" rel="noopener noreferrer" class="text-white hover:text-blue-200 transition duration-300">
-              <i class="fab fa-github text-3xl"></i>
-            </a>
-          </div>  */}}
-        </div>
-        <div class="md:w-1/2 flex justify-center">
-          <div class="hero-image relative animate-fade-in-up delay-200">
-            <div class="w-64 h-64 md:w-80 md:h-80 rounded-full bg-white bg-opacity-20 backdrop-filter backdrop-blur-lg border-4 border-white border-opacity-30 overflow-hidden">
-              <div class="w-full h-full overflow-hidden rounded-full">
-                <img src="{{ .Site.Params.profile_image }}" alt="Portrait of {{ .Site.Params.name }}" loading="lazy" decoding="async" class="object-cover w-full h-full" />
+<section id="home" class="min-h-screen flex flex-col items-center justify-start md:flex-row md:items-center md:justify-center gradient-bg dark:gradient-bg-dark text-white relative overflow-hidden hero-section">
+  <!-- Background decoration -->
+  <div class="absolute inset-0 opacity-10">
+    <div class="absolute top-20 left-20 w-32 h-32 bg-white rounded-full blur-xl"></div>
+    <div class="absolute bottom-20 right-20 w-24 h-24 bg-blue-300 rounded-full blur-xl"></div>
+    <div class="absolute top-1/2 left-1/3 w-16 h-16 bg-purple-300 rounded-full blur-lg"></div>
+  </div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+    <div class="flex flex-col lg:flex-row items-center justify-between gap-12 mt-8 md:mt-0 w-full">
+      <!-- Left content - Profile image -->
+      <div class="lg:w-1/2 flex justify-center lg:justify-start mt-8 md:mt-0">
+        <div class="relative animate-fade-in-up" style="animation-delay: 0.1s;">
+          <!-- Main image container -->
+          <div class="relative">
+            <div class="w-72 h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full bg-gradient-to-br from-blue-600 to-blue-800 p-1 shadow-2xl">
+              <div class="w-full h-full rounded-full overflow-hidden bg-white">
+                <img 
+                  src="{{ .Site.Params.profile_image }}" 
+                  alt="Portrait of {{ .Site.Params.name }}" 
+                  loading="lazy" 
+                  decoding="async" 
+                  class="object-cover w-full h-full rounded-full"
+                />
               </div>
             </div>
-            <div class="absolute -bottom-5 -right-5 bg-yellow-400 dark:bg-yellow-500 text-gray-800 px-4 py-2 rounded-lg font-medium shadow-lg">
-              <i class="fas fa-map-marker-alt mr-2"></i> {{ .Site.Params.hero_location }}
+            <!-- Background decoration for image -->
+            <div class="absolute inset-0 -z-10">
+              <div class="w-full h-full rounded-full bg-gradient-to-br from-blue-500 to-purple-600 blur-3xl opacity-20 animate-pulse"></div>
+            </div>
+            <!-- Location badge -->
+            <div class="absolute -bottom-4 -right-4 animate-fade-in-up" style="animation-delay: 0.6s;">
+              <div class="inline-flex items-center bg-yellow-400 text-gray-800 px-4 py-2 rounded-full shadow-lg">
+                <i class="fas fa-map-marker-alt mr-2"></i>
+                <span>{{ .Site.Params.hero_location }}</span>
+              </div>
             </div>
           </div>
         </div>
       </div>
+      <!-- Right content -->
+      <div class="lg:w-1/2 text-center lg:text-left w-full mt-8 md:mt-0">
+        <!-- Greeting -->
+        <div class="mb-4 mt-4 md:mt-0 hero-text-element" data-animation="greeting">
+          <span class="text-blue-200 dark:text-blue-300 font-medium text-lg block">Hello, I'm</span>
+        </div>
+        <!-- Name -->
+        <h1 class="text-5xl md:text-6xl lg:text-6xl font-bold mb-6 font-heading leading-tight hero-name hero-text-element" data-animation="name">
+          {{ .Site.Params.name }}
+        </h1>
+        <!-- Tagline with typing effect -->
+        <h2 class="text-2xl md:text-3xl lg:text-4xl mb-6 font-light text-blue-100 dark:text-blue-200 hero-text-element" data-animation="tagline">
+          <span class="typewriter">{{ .Site.Params.tagline }}</span>
+        </h2>
+        <!-- Description -->
+        <p class="text-lg md:text-xl mb-8 max-w-2xl mx-auto lg:mx-0 text-blue-50 dark:text-blue-100 leading-relaxed hero-text-element" data-animation="description">
+          {{ .Site.Params.hero_description }}
+        </p>
+
+        <!-- Action buttons -->
+        <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-end hero-text-element" data-animation="buttons">
+          <a href="#contact" class="bg-white text-blue-600 dark:text-blue-700 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 dark:hover:bg-gray-200 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl hero-button">
+            Get in Touch
+          </a>
+          <a href="{{ .Site.Params.resume_url_en }}" target="_blank" rel="noopener" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 dark:hover:text-blue-700 transition-all duration-300 transform hover:scale-105 hero-button">
+            {{ .Site.Params.resume_label }}
+          </a>
+        </div>
+        <!-- Social links -->
+        <div class="flex justify-center lg:justify-end space-x-6 mt-8 mb-8 md:mb-0 hero-text-element" data-animation="social">
+          {{ range .Site.Params.social }}
+          <a href="{{ .url }}" target="_blank" rel="noopener noreferrer" class="text-white hover:text-blue-200 transition-all duration-300 transform hover:scale-110">
+            <i class="fab fa-{{ .icon }} text-2xl"></i>
+          </a>
+          {{ end }}
+        </div>
+      </div>
     </div>
-  </section>
+  </div>
+</section>
   

@@ -3,15 +3,21 @@ title: "About"
 type: "homepage"
 headless: true
 quickfacts:
-  - icon: "briefcase"
-    title: "Current Role"
-    value: "DevOps Manager at <a href=\"https://dmind.it\" target=\"_blank\" rel=\"noopener noreferrer\"><strong>DMIND</strong></a>"
-  - icon: "language"
-    title: "Languages"
-    value: "English (Advanced), Italian (Native)"
-  - icon: "heart"
-    title: "Interests"
-    value: "Cooking, Drumming, Motorbike, Gamer"
+  - icon: briefcase
+    title: Current Role
+    value: DevOps Manager at <a href="https://dmind.it" target="_blank" rel="noopener noreferrer"><strong>DMIND</strong></a>
+  - icon: graduation-cap
+    title: Certification
+    value: Cybersecurity Practioner by <a href="https://isco-sc.it/" target="_blank" rel="noopener noreferrer">ISCO</a>
+  - icon: award
+    title: Recent Achievement
+    value: Integrated generative AI in e-commerce product management
+  - icon: language
+    title: Languages
+    value: English (Advanced), Italian (Native)
+  - icon: heart
+    title: Interests
+    value: Cooking, Drumming, Motorbike, Gamer
 ---
 
 
