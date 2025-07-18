@@ -77,7 +77,8 @@ params:
   formspree_endpoint: https://formspree.io/f/mqabozwr
   github_url: https://github.com/setola
   github_text: Setola on Github
-  resume_url_en: /Emanuele-Tessore-CV.pdf
+  resume_url_en: /Emanuele-Tessore-CV-ENG.pdf
+  resume_url_it: /Emanuele-Tessore-CV-ITA.pdf
   resume_label: Resume
   social:
     - name: "Github"
