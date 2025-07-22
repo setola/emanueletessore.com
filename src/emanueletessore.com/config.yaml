@@ -77,8 +77,8 @@ params:
   formspree_endpoint: https://formspree.io/f/mqabozwr
   github_url: https://github.com/setola
   github_text: Setola on Github
-  resume_url_en: https://docs.google.com/document/d/1I-fZ6CrUhZ_fn8XalgClz-EFNdPUl5-SOTSK_j563AY/export?format=pdf
-  resume_url_it: https://docs.google.com/document/d/1yD2uu7ZjBKukheOU8FdjV56QBqPd4qW03gdThYb5tlA/export?format=pdf
+  resume_url_en: https://docs.google.com/document/d/1I-fZ6CrUhZ_fn8XalgClz-EFNdPUl5-SOTSK_j563AY/export?format=pdf&tab=t.0
+  resume_url_it: https://docs.google.com/document/d/1yD2uu7ZjBKukheOU8FdjV56QBqPd4qW03gdThYb5tlA/export?format=pdf&tab=t.0
   resume_label: Resume
   social:
     - name: "Github"
