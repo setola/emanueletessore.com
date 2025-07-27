@@ -1,0 +1,24 @@
+<section id="testimonials" class="py-16 bg-white dark:bg-gray-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {{ with .Site.GetPage "testimonials" }}
+        <h2 class="text-3xl font-bold text-center mb-4 font-heading text-gray-900 dark:text-white">{{ .Title }}</h2>
+        <p class="text-lg text-center mb-12 text-gray-600 dark:text-gray-400 italic">{{ .Params.intro }}</p>
+ 
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {{ range $index, $exp := .Params.references }}
+            <div class="bg-gray-50 dark:bg-gray-700 p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 project-card border border-gray-200 dark:border-gray-700 animate-fade-in-up">
+                <blockquote class="italic space-y-3 text-gray-700 dark:text-gray-300">
+                    "{{ $exp.quote }}"
+                </blockquote>
+                <div class="flex items-center justify-center mt-6 space-x-3 rtl:space-x-reverse">
+                    <div class="flex items-center divide-x-2 rtl:divide-x-reverse divide-gray-500 dark:divide-gray-700">
+                        <cite class="pe-3 font-medium text-gray-900 dark:text-white">{{ $exp.name }}</cite>
+                        <cite class="ps-3 text-sm text-gray-500 dark:text-gray-400">{{ $exp.role }} at {{ $exp.company }}</cite>
+                    </div>
+                </div>
+            </div>
+            {{ end }}
+        </div>
+        {{ end }}
+    </div>
+</section>

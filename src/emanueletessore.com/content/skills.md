@@ -54,7 +54,4 @@ domains:
       Native Italian speaker with full professional English proficiency, 
       enabling effective communication in diverse international settings.
 
-  - icon: "hands-helping"
-    title: "Community & Learning"
-    description: "Active in volunteer work, professional development and consultant."
 ---

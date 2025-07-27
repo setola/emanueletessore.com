@@ -42,7 +42,7 @@ menu:
       url: /#experience
       weight: 40
     - name: Techstack
-      url: /#techstack
+      url: /#technical
       weight: 50
     - name: Contact
       url: /#contact
@@ -117,19 +117,6 @@ params:
       I'm a DevOps engineer, I was a web developer and I'll forever be a
       tech enthusiast.
     image: /images/profile.jpg
-  about:
-    title: About Me
-    description: >
-      I've started developing applications in academia, in early 2000, with
-      languages like C++ and Java.
-
-      I've always been fascinated by the potential of the Internet, a passion that led me to face either technical or design and marketing topics.
-
-      I also developed a strong interest in automation and interactions between technology and the physical world while exploring micro-controllers, IoT and CNC stuff.
-
-      Technology not only is the key point of my professional career, but it's also my oldest hobby and of course one passion that takes me over the years.
-
-      I like Linux, OpenSource, Arduino and Raspberry PI, Kubernetes, motorbikes and drums.
 outputs:
   home:
     - HTML
