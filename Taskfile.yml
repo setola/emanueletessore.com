@@ -17,6 +17,7 @@ tasks:
         --name hugo
         --user $(id -u):$(id -g)
         --publish 1313:1313
+        --publish 3001:3001
         --volume .:/src
         --workdir /src/src/emanueletessore.com
         --env HUGO_THEME

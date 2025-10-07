@@ -2,6 +2,7 @@
 title: How to Reorder Magento 2 Attribute Options Alphabetically
 date: Sat, 29 Aug 2025 19:12:34 +0000
 draft: false
+featured_image: "/images/logos/magento-2.png"
 tags: ['Magento', 'MySQL']
 categories: ['Howto', 'Magento']
 ---

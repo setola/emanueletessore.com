@@ -2,6 +2,7 @@
 title: 'Make Unifi OpenVPN working in Ubuntu 24.04'
 date: Thu, 10 Jul 2025 09:32:33 +0000
 draft: false
+featured_image: "/images/logos/unifi.png"
 tags: ['Unifi', 'OpenVPN', 'Ubuntu']
 categories: ['Howto', 'Unifi']
 disqus_url: http://www.emanueletessore.com/unifi-openvpn-ubuntu/

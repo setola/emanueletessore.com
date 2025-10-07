@@ -2,6 +2,8 @@ baseURL: https://www.emanueletessore.com
 languageCode: en-us
 title: Emanuele Tessore
 theme: careercanvas
+defaultContentLanguage: en
+defaultContentLanguageInSubdir: false
 enableRobotsTXT: true
 enableGitInfo: true
 enableEmoji: true
@@ -58,7 +60,6 @@ params:
   profile_image: /images/emanuele-tex-tessore.png
   fourofour_image: /images/404-afraid.png
   tagline: DevOps, WebDev & Tech Enthusiast
-  description: Make the world a better place, one line of code at a time!
   keywords:
     - DevOps
     - Web Developer
@@ -70,9 +71,6 @@ params:
   nickname: Tex / Setola
   profession: DevOps Engineer
   location: Venice, Italy
-  hero_description: >
-    Make the world a better place, one line of code at a time!
-  hero_location: Venice, Italy
   email: me@emanueletessore.com
   formspree_endpoint: https://formspree.io/f/mqabozwr
   github_url: https://github.com/setola
@@ -80,6 +78,7 @@ params:
   resume_url_en: https://docs.google.com/document/d/1I-fZ6CrUhZ_fn8XalgClz-EFNdPUl5-SOTSK_j563AY/export?format=pdf&tab=t.0
   resume_url_it: https://docs.google.com/document/d/1yD2uu7ZjBKukheOU8FdjV56QBqPd4qW03gdThYb5tlA/export?format=pdf&tab=t.0
   resume_label: Resume
+  copyright: © 2025 | Emanuele Tessore
   social:
     - name: "Github"
       url: "https://github.com/setola"
@@ -101,22 +100,53 @@ params:
       icon: "fa fa-whatsapp fa-2x whatsapp"
       url: "https://wa.me/+393934227139"
       weight: 60
-  collab_tags:
-    - DevOps Manager
-    - Cybersecurity Specialist
-    - Cloud Architect
-    - IT Consultant
-    - R&D and Innovation
-    - Kubernetes Expert
-    - Open Source Advocate
-    - Automation Specialist
-  hero:
-    title: Hi! I'm Emanuele
-    subtitle: but everybody calls me Tex or Setola
-    description:
-      I'm a DevOps engineer, I was a web developer and I'll forever be a
-      tech enthusiast.
-    image: /images/profile.jpg
+  pexels:
+    queries:
+      - universe solar systems nasa pictures
+      - structural long span bridges
+      - nebula nasa pictures
+  color_palettes:
+    palette:
+      - name: professional
+        main_color: "#474A51"
+        second_color: "#E52521"
+        third_color: "#3CB043"
+      # - name: ocean
+      #   main_color: "#1E40AF"
+      #   second_color: "#06B6D4"
+      #   third_color: "#10B981"
+      # - name: sunset
+      #   main_color: "#DC2626"
+      #   second_color: "#F59E0B"
+      #   third_color: "#EF4444"
+      # - name: forest
+      #   main_color: "#059669"
+      #   second_color: "#10B981"
+      #   third_color: "#F59E0B"
+      # - name: fire
+      #   main_color: "#EA580C"
+      #   second_color: "#DC2626"
+      #   third_color: "#F59E0B"
+      # - name: steel
+      #   main_color: "#374151"
+      #   second_color: "#6B7280"
+      #   third_color: "#10B981"
+      # - name: navy
+      #   main_color: "#1E3A8A"
+      #   second_color: "#3B82F6"
+      #   third_color: "#F59E0B"
+      # - name: charcoal
+      #   main_color: "#1F2937"
+      #   second_color: "#EF4444"
+      #   third_color: "#22C55E"
+      # - name: slate
+      #   main_color: "#475569"
+      #   second_color: "#0EA5E9"
+      #   third_color: "#F97316"
+      # - name: midnight
+      #   main_color: "#0F172A"
+      #   second_color: "#8B5CF6"
+      #   third_color: "#06B6D4"
 outputs:
   home:
     - HTML
@@ -147,3 +177,31 @@ security:
       - (?i)GET|POST
     urls:
       - .*
+languages:
+  en:
+    contentDir: content/en
+    languageName: English
+    weight: 1
+    params:
+      tagline: DevOps. Coder. Problem Solver.
+      description: Make the world a better place, one line of code at a time!
+      hero_description: >
+        Make the world a better place, one line of code at a time!
+      hero_location: Venice, Italy  
+      collab_tags:
+        - DevOps Manager
+        - Cybersecurity Specialist
+        - Cloud Architect
+        - IT Consultant
+        - R&D and Innovation
+        - Kubernetes Expert
+        - Open Source Advocate
+        - Automation Specialist
+
+    hero:
+      title: Hi! I'm Emanuele
+      subtitle: but everybody calls me Tex or Setola
+      description:
+        I'm a DevOps engineer, I was a web developer and I'll forever be a
+        tech enthusiast.
+      image: /images/profile.jpg
