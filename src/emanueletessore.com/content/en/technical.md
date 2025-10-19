@@ -121,8 +121,8 @@ technical_groups:
         devicon_name: sqldeveloper
       - icon: graphql
         name: GraphQL
-        #devicon_name: graphql-plain
-        raw_name: https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/graphql/graphql-plain.svg
+        devicon_name: graphql
+        #raw_name: https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/graphql/graphql-plain.svg
   
 
 --- 
