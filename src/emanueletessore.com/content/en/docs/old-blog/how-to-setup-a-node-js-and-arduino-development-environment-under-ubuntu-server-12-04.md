@@ -4,6 +4,7 @@ date: Sun, 09 Sep 2012 20:43:08 +0000
 draft: false
 tags: ['Arduino', 'arduino', 'node.js', 'Node.js', 'ubuntu']
 disqus_url: http://www.emanueletessore.com/how-to-setup-a-node-js-and-arduino-development-environment-under-ubuntu-server-12-04/
+featured_image: https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original-wordmark.svg
 ---
 
 Some nights ago I've decided to start learning something about a nice project started by Ryan Lienhart Dahl aiming to **

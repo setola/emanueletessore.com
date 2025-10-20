@@ -6,6 +6,7 @@ featured_image: "/images/logos/unifi.png"
 tags: ['Unifi', 'OpenVPN', 'Ubuntu']
 categories: ['Howto', 'Unifi']
 disqus_url: http://www.emanueletessore.com/unifi-openvpn-ubuntu/
+featured_image: https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/ubuntu/ubuntu-original.svg
 ---
 
 ## Configure server

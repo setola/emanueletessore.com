@@ -3,6 +3,7 @@ title: 'Slideshow: one big image for all'
 date: Sat, 05 May 2012 19:07:27 +0000
 draft: false
 tags: ['gd libs', 'PHP', 'slideshow', 'website optimization']
+featured_image: https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg
 ---
 
 Most of the websites I've set up **weight** is given by the images of the **slideshow**.

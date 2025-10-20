@@ -3,6 +3,7 @@ title: 'CSS3 gradient border'
 date: Thu, 14 Jun 2012 09:32:40 +0000
 draft: false
 tags: ['CSS &amp; Html', 'css3 gradient']
+featured_image: https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg
 ---
 
 Some days ago my preferred graphic designer come out with a strange **call-to-action button style**. It was a **rounded

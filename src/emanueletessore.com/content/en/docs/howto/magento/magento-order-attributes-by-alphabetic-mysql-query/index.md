@@ -5,6 +5,7 @@ draft: false
 featured_image: "/images/logos/magento-2.png"
 tags: ['Magento', 'MySQL']
 categories: ['Howto', 'Magento']
+featured_image: https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/magento/magento-original.svg
 ---
 
 Sometimes in Magento 2 you end up with attribute options (like dropdown values) that are not ordered the way you want. 

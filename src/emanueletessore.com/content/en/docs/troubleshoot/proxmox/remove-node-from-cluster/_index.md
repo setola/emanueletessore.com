@@ -4,6 +4,8 @@ date: 2024-10-14T15:48:24Z
 draft: false
 tags: ['Proxmox', 'Cluster', 'Node Management']
 categories: ['Troubleshoot', 'Proxmox']
+featured_image: https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/proxmox/proxmox-plain-wordmark.svg
+          
 ---
 
 Removing a Proxmox node from a cluster is a critical operation that requires careful planning and execution. This guide provides a comprehensive step-by-step process to safely remove a node without affecting cluster stability.

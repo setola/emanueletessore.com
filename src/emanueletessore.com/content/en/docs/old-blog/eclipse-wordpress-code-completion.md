@@ -4,6 +4,7 @@ date: Sun, 14 Oct 2012 14:18:50 +0000
 draft: false
 tags: ['eclipse', 'PHP', 'wordpress']
 disqus_url: http://www.emanueletessore.com/eclipse-wordpress-code-completion/
+featured_image: https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/wordpress/wordpress-plain.svg
 ---
 
 **WordPress** is one of the most known and used CMS in the web.

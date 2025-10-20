@@ -3,6 +3,7 @@ title: 'How To move WordPress shortcodes from post body to template part'
 date: Mon, 23 Feb 2015 15:07:09 +0000
 draft: false
 tags: ['PHP']
+featured_image: https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/wordpress/wordpress-plain.svg
 ---
 
 **Shortcodes** are a very fancy feature of **WordPress** CMS.

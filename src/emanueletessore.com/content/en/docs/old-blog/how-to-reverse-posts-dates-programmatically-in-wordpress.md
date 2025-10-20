@@ -3,6 +3,7 @@ title: 'How to reverse posts dates programmatically in WordPress'
 date: Fri, 20 Feb 2015 15:32:06 +0000
 draft: false
 tags: ['PHP', 'wordpress']
+featured_image: https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/wordpress/wordpress-plain.svg
 ---
 
 Some days ago the phone rang and the client asked me why their WordPress blog posts where showing in the inverted order.

@@ -4,6 +4,7 @@ date: Wed, 26 Mar 2014 10:16:45 +0000
 draft: false
 tags: ['JavaScript', 'twitter bootstrap']
 disqus_url: http://www.emanueletessore.com/twitter-bootstrap-popover-add-close-button/
+featured_image: https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg
 ---
 
 Recently I had to build a 'smart booking form' for a group of hotels. The website is made on Twitter's Bootstrap and is fully responsive. 

@@ -5,6 +5,7 @@ draft: false
 tags: ['PHP', 'SMTP', 'Server-Administration']
 categories: ['Howto', 'Ubuntu']
 disqus_url: http://www.emanueletessore.com/how-to-configure-msmtp-as-a-gmail-relay-on-ubuntu-server/
+featured_image: https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/ubuntu/ubuntu-original.svg
 ---
 
 Today my goal was to be able to **send mails from PHP** from my web-server **using Gmail smtp**.

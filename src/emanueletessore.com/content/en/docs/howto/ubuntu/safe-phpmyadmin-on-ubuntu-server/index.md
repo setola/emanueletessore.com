@@ -5,6 +5,7 @@ draft: false
 tags: ['Ubuntu', 'PHPMyAdmin', Server-Administration]
 categories: ['Howto', 'Ubuntu']
 disqus_url: http://www.emanueletessore.com/safe-phpmyadmin-on-ubuntu-server/
+featured_image: https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/ubuntu/ubuntu-original.svg
 ---
 
 Today I reached the task to make the **PHPMyAdmin install secure** on one of my Ubuntu servers. The machine is

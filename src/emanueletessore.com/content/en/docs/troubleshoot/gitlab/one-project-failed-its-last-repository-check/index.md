@@ -4,6 +4,7 @@ date: 2022-08-08T09:25:33Z
 draft: false
 tags: ['Gitlab']
 categories: ['Troubleshoot', 'Arduino']
+featured_image: https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/gitlab/gitlab-original.svg
 ---
 
 reference: https://forum.gitlab.com/t/gitlab-projects-failed-their-last-repository-check/19147/3

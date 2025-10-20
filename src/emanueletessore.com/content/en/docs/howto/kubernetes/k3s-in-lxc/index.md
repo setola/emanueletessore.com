@@ -4,6 +4,7 @@ date: 2022-07-06T10:35:23Z
 draft: false
 tags: ['Kubernetes', 'LXC', 'Proxmox']
 categories: ['howto', 'Kubernetes']
+featured_image: https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kubernetes/kubernetes-original.svg
 ---
 
 ## Configure host

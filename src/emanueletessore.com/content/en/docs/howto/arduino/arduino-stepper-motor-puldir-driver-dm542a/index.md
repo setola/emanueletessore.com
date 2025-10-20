@@ -5,6 +5,7 @@ draft: false
 tags: ['Arduino', 'DM542A', 'stepper']
 categories: ['Howto', 'Arduino']
 disqus_url: http://www.emanueletessore.com/arduino-stepper-motor-puldir-driver-dm542a/
+featured_image: https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/arduino/arduino-original.svg
 ---
 
 Some days ago I've purchased some **cheap but powerful stepper motors bundle** from china.

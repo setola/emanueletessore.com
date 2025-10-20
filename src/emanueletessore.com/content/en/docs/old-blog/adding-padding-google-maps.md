@@ -3,6 +3,7 @@ title: 'Adding some padding on a Google Maps'
 date: Mon, 13 Oct 2014 10:39:51 +0000
 draft: false
 tags: ['News']
+featured_image: https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg
 ---
 
 Some days ago I was asked to make a google maps with a nice translucent bar on "position absolute". Everything worked

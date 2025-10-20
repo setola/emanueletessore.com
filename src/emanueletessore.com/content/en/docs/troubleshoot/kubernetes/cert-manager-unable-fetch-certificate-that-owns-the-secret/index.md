@@ -4,6 +4,7 @@ date: 2022-08-21T17:07:53Z
 draft: false
 tags: ['Kubernetes', 'cert-manager']
 categories: ['Troubleshoot', 'Kubernetes']
+featured_image: https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kubernetes/kubernetes-original.svg
 ---
 
 

@@ -3,6 +3,7 @@ title: 'How to install Kodi on Ubuntu 15.10'
 date: Sat, 14 Nov 2015 18:51:31 +0000
 draft: false
 tags: ['Server Administration']
+featured_image: https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/ubuntu/ubuntu-original.svg
 ---
 
 Well one of these days it should happen... My **Open Source Media Center** pc had an hardware problem, so I've seized

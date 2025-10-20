@@ -3,6 +3,7 @@ title: 'How to use multiple passwords to access a protected WordPress post'
 date: Fri, 20 Feb 2015 16:24:52 +0000
 draft: false
 tags: ['News']
+featured_image: https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/wordpress/wordpress-plain.svg
 ---
 
 Everyone should know that in the WordPress admin interface you can set a **single password** to make a post visible only
