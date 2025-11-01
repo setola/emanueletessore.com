@@ -9,6 +9,11 @@ tasks:
     cmds:
       - task --list
 
+  pull:
+    desc: Pull latest images
+    cmds:
+      - docker pull ${HUGO_IMAGE}
+
   hugo:
     desc: Run Hugo commands
     cmds:
@@ -46,6 +51,7 @@ tasks:
     desc: Build static site for production
     cmds:
       - task: clean
+      - task: pull
       - task: npm
         vars:
           CLI_ARGS: install
