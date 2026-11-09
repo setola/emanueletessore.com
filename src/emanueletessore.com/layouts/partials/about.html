@@ -4,10 +4,10 @@
     <div class="flex flex-col lg:flex-row gap-8">
       <div class="flex-1 about-text-element">
         <div class="bg-gradient-to-br from-bg-secondary to-bg-tertiary dark:from-bg-secondary dark:to-bg-tertiary p-6 rounded-xl shadow-lg border border-border-primary dark:border-border-primary">
-          <p class="text-lg text-text-secondary dark:text-text-secondary leading-relaxed">
+          <div class="text-lg text-text-secondary dark:text-text-secondary leading-relaxed space-y-2">
             {{ with .Site.GetPage "about" }}{{ .Params.intro | markdownify }}{{ end }}
-          </p>
-          {{ if $.Site.Params.linkedin_ur }}
+          </div>
+          {{ if $.Site.Params.linkedin_url }}
           <div class="mt-6">
             <a href="{{ $.Site.Params.linkedin_url }}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center bg-gradient-primary text-white px-4 py-2 rounded-lg shadow-lg about-button button-hover">
               <i class="fab fa-linkedin-in mr-3 text-lg"></i> 
@@ -29,10 +29,10 @@
             {{ i18n "more" }}
           </button>
         </div>
-        <div class="space-y-2">
+        <div class="space-y-1.5">
           {{ with .Site.GetPage "about" }}
             {{ range $index, $fact := .Params.quickfacts }}
-              <div class="flex items-start quick-fact-card about-text-element py-3 px-4 rounded-xl">
+              <div class="flex items-start quick-fact-card about-text-element py-2 px-4 rounded-xl">
                 <i class="fas fa-{{ $fact.icon }} text-primary dark:text-white text-lg mr-3"></i>
                 <div class="flex-1">
                   <h4 class="font-bold text-gray-900 dark:text-text-primary mb-1 text-lg">{{ $fact.title }}</h4>
@@ -47,14 +47,14 @@
                       {{ range $items }}
                         {{ $item := trim . "- " }}
                         {{ if $item }}
-                          <span class="inline-flex items-center px-3 py-1.5 text-gray-700 dark:text-text-tertiary text-base font-medium border border-border-primary dark:border-border-primary rounded-xl">
+                          <div class="inline-flex items-center px-3 py-1.5 text-gray-700 dark:text-text-tertiary text-base font-medium border border-border-primary dark:border-border-primary rounded-xl">
                             {{ $item | markdownify | safeHTML }}
-                          </span>
+                          </div>
                         {{ end }}
                       {{ end }}
                     </div>
                   {{ else }}
-                    <p class="text-gray-700 dark:text-text-tertiary text-base leading-relaxed">{{ $fact.value | markdownify }}</p>
+                    <div class="text-gray-700 dark:text-text-tertiary text-base leading-relaxed">{{ $fact.value | markdownify }}</div>
                   {{ end }}
                 </div>
               </div>

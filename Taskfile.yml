@@ -16,6 +16,8 @@ tasks:
 
   hugo:
     desc: Run Hugo commands
+    env:
+      HUGO_PARAMS_PEXELSAPIKEY: '{{.PEXELS_API_KEY | default ""}}'
     cmds:
       - docker run
         --rm
@@ -26,6 +28,7 @@ tasks:
         --volume .:/src
         --workdir /src/src/emanueletessore.com
         --env HUGO_THEME
+        --env HUGO_PARAMS_PEXELSAPIKEY
         ${HUGO_IMAGE}
         {{.CLI_ARGS}}
 
@@ -81,9 +84,9 @@ tasks:
       - rm -fr src/emanueletessore.com/node_modules/
 
   update-theme:
-    desc: Update theme to latest version
+    desc: Update theme to latest upstream version
     cmds:
-      - git submodule update --init --recursive
+      - git submodule update --init --remote --recursive
 
   stop:
     desc: Stop all services

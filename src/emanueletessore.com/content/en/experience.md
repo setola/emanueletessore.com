@@ -5,6 +5,10 @@ headless: true
 intro: >-
   Automating evolution from Web Developer to Cloud Architect through security and performance monitoring.
 
+resume_downloads:
+  - lang: en
+    label: EN
+
 positions:
   - company: DMIND
     company_description: >

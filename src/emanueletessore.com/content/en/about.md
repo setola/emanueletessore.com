@@ -14,10 +14,17 @@ quickfacts:
     value: Integrated generative AI in e-commerce product management
   - icon: language
     title: Languages
-    value: English (Advanced), Italian (Native)
+    value: |
+      - English (Advanced)
+      - Italian (Native)
   - icon: heart
     title: Interests
-    value: Cooking, Drumming, Motorbike, Gamer
+    value: |
+      - 👨‍🍳 Cooking
+      - 🥁 Drumming
+      - 🏍️ Motorbike
+      - 🎮 Gaming
+      - 🎯 Sport Shooting
 
 intro: >-
   Hi! my name is **Emanuele** but everybody calls me **Tex** or **Setola**.

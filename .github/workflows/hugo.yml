@@ -47,6 +47,8 @@ jobs:
           extended: true
       
       - name: Building static site
+        env:
+          HUGO_PARAMS_PEXELSAPIKEY: ${{ secrets.PEXELS_API_KEY }}
         run: |
           cd ${{ github.workspace }}/src/emanueletessore.com
           hugo --environment production --destination public --minify
