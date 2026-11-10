@@ -59,17 +59,18 @@ params:
   author: Emanuele Tessore
   profile_image: /images/emanuele-tex-tessore.png
   fourofour_image: /images/404-afraid.png
-  tagline: DevOps, WebDev & Tech Enthusiast
+  tagline: DevOps, Software Engineering & Automation
   keywords:
     - DevOps
     - Web Developer
     - Kubernetes
     - Linux
     - Open Source
-    - Tech
+    - Automation
+    - AI-Assisted Engineering
   name: Emanuele Tessore
   nickname: Tex / Setola
-  profession: DevOps Engineer
+  profession: DevOps Manager & System Architect
   location: Venice, Italy
   email: me@emanueletessore.com
   formspreeendpoint: https://formspree.io/f/mqabozwr
@@ -192,17 +193,21 @@ languages:
       resume_url: https://docs.google.com/document/d/1I-fZ6CrUhZ_fn8XalgClz-EFNdPUl5-SOTSK_j563AY/export?format=pdf&tab=t.0
       firstName: Emanuele
       lastName: Tessore
-      tagline: DevOps. Coder. Problem Solver.
-      description: Make the world a better place, one line of code at a time!
+      tagline: DevOps. Code. Automation.
+      description: >
+        DevOps Manager and System Architect connecting software, cloud infrastructure
+        and AI-assisted engineering, with security and maintainability in mind.
       hero_description: >
-        Make the world a better place, one line of code at a time!
+        I build software, automate infrastructure and put AI to practical use.
+        Less repetitive work. More engineering.
       hero_location: Venice, Italy  
       collab_tags:
         - DevOps Manager
-        - Cybersecurity Specialist
+        - Security-Conscious Engineering
         - Cloud Architect
         - IT Consultant
         - R&D and Innovation
-        - Kubernetes Expert
+        - Kubernetes Operations
         - Open Source Advocate
-        - Automation Specialist
+        - Infrastructure Automation
+        - AI-Assisted Engineering

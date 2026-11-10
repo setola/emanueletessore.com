@@ -2,7 +2,8 @@
 title: What They Say About Me
 type: homepage
 intro: >-
-    Over the years, I’ve had the privilege of working with talented professionals across different teams and projects. Here are some words shared by former colleagues about our time working together.
+  Engineering is a team effort. Here is how former colleagues describe
+  working with me across development, operations and project delivery.
 headless: true
 references:
   - name: Lorenzo F.

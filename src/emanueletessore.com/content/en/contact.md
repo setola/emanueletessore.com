@@ -3,20 +3,19 @@ title: "Contact"
 type: "homepage"
 headless: true
 intro: >-
-  Let's connect! I'm always interested in hearing about new projects and opportunities.
+  Have a project to build, infrastructure to untangle or an automation idea
+  worth exploring? Let's talk about the problem, the constraints and what
+  a useful solution would look like.
 quickfacts:
   - icon: "envelope"
     title: "Email"
-    value: "[felipe.cordero@fireraven.ai](mailto:felipe.cordero@fireraven.ai)"
+    value: "[me@emanueletessore.com](mailto:me@emanueletessore.com)"
   - icon: "map-marker-alt"
     title: "Location"
-    value: "Montréal, Canada"
-  - icon: "linkedin"
-    title: "LinkedIn"
-    value: "[linkedin.com/in/felipecordero](https://linkedin.com/in/felipecordero)"
+    value: "Venice, Italy"
   - icon: "github"
     title: "GitHub"
-    value: "[github.com/felipecordero](https://github.com/felipecordero)"
+    value: "[github.com/setola](https://github.com/setola)"
 ---
 
 

@@ -3,7 +3,8 @@ title: Technical Skills
 type: homepage
 headless: true
 intro: >-
-  Some of the tech stack I use for software development, DevOps and ITOps.
+  Tools I work with across software development, infrastructure, operations
+  and AI-assisted engineering.
 
 technical_groups:
 
@@ -22,7 +23,7 @@ technical_groups:
         name: Apache
         devicon_name: apache
       - icon: brands fa-raspberry-pi
-        name: Rasberry PI
+        name: Raspberry Pi
         devicon_name: raspberrypi
       - icon: cloud
         name: DigitalOcean
@@ -49,7 +50,7 @@ technical_groups:
         name: JavaScript
         devicon_name: javascript
       - icon: brands fa-node
-        name: Node
+        name: Node.js
         devicon_name: nodejs
       - icon: typescript
         name: TypeScript
@@ -79,13 +80,22 @@ technical_groups:
         name: GitLab
         devicon_name: gitlab
       - icon: code
-        name: VSCode
+        name: VS Code
         devicon_name: vscode
       - icon: docker
         name: Docker
         devicon_name: docker
 
-  - title: Orchestration
+  - title: AI-Assisted Development
+    skills:
+      - icon: terminal
+        name: pi
+      - icon: globe
+        name: pi-web
+      - icon: brain
+        name: OpenAI
+
+  - title: Infrastructure & Orchestration
     skills:
       - icon: dharmachakra
         name: Kubernetes
@@ -93,6 +103,9 @@ technical_groups:
       - icon: a
         name: Ansible
         devicon_name: ansible
+      - icon: server
+        name: Terraform
+        devicon_name: terraform
 
   - title: Web & UI
     skills:
@@ -109,7 +122,7 @@ technical_groups:
         name: Next.js
         devicon_name: nextjs
 
-  - title: Query Languages
+  - title: Data & Query Technologies
     icon: database
     color_scheme: green
     skills:

@@ -3,7 +3,9 @@ title: Experience
 type: homepage
 headless: true
 intro: >-
-  Automating evolution from Web Developer to Cloud Architect through security and performance monitoring.
+  From game servers and web applications to cloud infrastructure and DevOps
+  leadership: a career built around making systems work, and making them
+  easier to work on.
 
 resume_downloads:
   - lang: en
@@ -12,136 +14,130 @@ resume_downloads:
 positions:
   - company: DMIND
     company_description: >
-      Multi-channel Communication Agency with a strategic consulting approach and 
-      an interdisciplinary team capable of managing every communication assets.
+      A multichannel communication agency combining strategic consulting,
+      creative work and technical delivery.
     role: DevOps Manager
     period: Jun 2022 - Present
-    location: "Venice - Italy"
+    location: "Venice, Italy"
     industry: "Communication Technology"
     bullet_points:
-      - Leading DevOps initiatives, infrastructure automation, and cloud operations
-      - Kubernetes cluster setup with K3D and K3S, management, optimization and monitoring
-      - Design and implementation of CI/CD pipelines using GitLab
-      - Writing Infrastructure as Code playbooks with Terraform and Ansible
-      - Contributing to the real-time deployment and monitoring to ensure regulatory compliance
-      - Design and development of CI/CD strategies for internal and external projects
+      - Leading DevOps initiatives, infrastructure automation and cloud operations
+      - Setting up, managing, monitoring and optimizing Kubernetes environments with k3d and K3s
+      - Designing and implementing GitLab CI/CD pipelines for internal and client projects
+      - Managing infrastructure as code with Terraform and Ansible
+      - Supporting regulatory compliance through deployment and monitoring practices
+      - Applying AI-assisted development workflows with pi, pi-web and OpenAI
 
   - company: DigitalMind
     company_description: >
-      A multimedia agency covering creativity, strategy, and technical execution for online and offline projects.
+      A multimedia agency covering creativity, strategy and technical execution
+      for online and offline projects.
     role: Senior Backend Developer
     period: Sep 2018 - May 2022
-    location: "Venice - Italy"
+    location: "Venice, Italy"
     industry: "Communication Technology"
     bullet_points:
-      - Servers and network equipment management both on-prem and cloud
-      - Debugging, troubleshooting, and optimizing code to ensure platform reliability
-      - Integrating and managing SQL databases (PostgreSQL\MySQL) while leveraging cloud tools
-      - Requirements collection, analysis and development of software solutions
-      - IT consultant and auditor for third party projects and infrastructures
-      - Developin tailor-made applications on customer requirements
+      - Managing servers and network equipment on premises and in the cloud
+      - Debugging and optimizing application code to improve platform reliability
+      - Integrating and managing PostgreSQL and MySQL databases alongside cloud services
+      - Gathering requirements and developing custom software around client needs
+      - Providing IT consulting and auditing for third-party projects and infrastructure
 
   - company: Calicantus / WebMaori
     company_description: >
-      A complete e-commerce outsourcing solution from technology and strategy to logistics, warehousing, and store management.
+      An e-commerce outsourcing provider covering technology, strategy,
+      logistics, warehousing and store management.
     role: Senior Backend Developer
     period: Sep 2016 - Sep 2018
-    location: "Venice - Italy"
+    location: "Venice, Italy"
     industry: "E-Commerce"
     bullet_points:
-    - Custom e-commerce platform development and maintenance
-    - Two way ERP/e-commerce integration
-    - Requirements collection, analysis and development of software solutions
-    - Knowledge of common e-commerce operations and procedures
-    - Update and upgrade legacy code running on production environment
+      - Developing and maintaining custom e-commerce platforms
+      - Building bidirectional integrations between ERP systems and online stores
+      - Gathering requirements and translating them into software solutions
+      - Supporting e-commerce operations and their underlying technical workflows
+      - Updating and upgrading legacy code in production environments
 
   - company: TSW
     company_description: >
-      A web agency with broad expertise in all areas of digital marketing, from technical implementation to SEO and SEM strategy.
+      A digital agency spanning technical implementation, SEO and SEM strategy.
     role: Senior Web Developer
     period: Jun 2015 - Aug 2016
-    location: "Treviso - Italy"
+    location: "Treviso, Italy"
     industry: "Communication Technology"
     bullet_points:
-      - Developing and maintaining websites
-      - Research & Development of new technologies
-      - Project development workflow standardization
-      - Wide use of PHP OOP Patterns on Symfony and Zend framework
-      - Deep direct experience with WordPress API
-      - Node JS for frontend compiling and deploy
-      - Multi-node website Infrastructure configuration and optimization
-      - Experience with Ansible for infrastructure orchestration and automation
+      - Developing and maintaining websites with Symfony, Zend Framework and WordPress APIs
+      - Researching new technologies and standardizing project development workflows
+      - Using Node.js for frontend build and deployment tooling
+      - Configuring and optimizing multinode website infrastructure
+      - Automating infrastructure orchestration with Ansible
 
   - company: FastBooking / D-Edge
     company_description: >
-      Hoteliers e-commerce solutions that connect digital travelers directly with hotels with tailored strategies and expert advice to boost sales and increase independence.
+      A hospitality technology provider helping hotels reach travelers directly
+      through e-commerce solutions and digital strategy.
     role: Project Manager and Web Developer
     period: Sep 2010 - Jun 2015
-    location: "Paris - France"
+    location: "Paris, France"
     industry: "Hospitality Technology"
     bullet_points:
-      - Developing and maintaining websites
-      - Research & Development of new products
-      - Project Manager and client accounting for the Web Package Dept.
-      - SEO for third party websites
-      - Wide experience on AJAX, JavaScript for the DOM and jQuery framework
-      - Extensive experience with PHP and CodeIgniter framework
-      - Deep direct experience with WordPress API
-  
+      - Developing and maintaining websites with PHP, CodeIgniter and WordPress APIs
+      - Building interactive interfaces with JavaScript, AJAX and jQuery
+      - Managing projects and client accounts for the Web Package department
+      - Researching and developing new products
+      - Providing SEO services for third-party websites
+
   - company: CiTex
     company_description:
-    role: Co-Owner - CTO
+    role: Co-Owner & CTO
     period: Sep 2008 - Sep 2018
-    location: "Turin - Italy"
+    location: "Turin, Italy"
     industry: "Web Technology"
     bullet_points:
-      - Developing and maintaining LAMP infrastructure and WordPress network with 30+ websites
-      - WordPress plugins development
-      - DevOps automation and Continuous Integration
-      - SEO and content for AdSense oriented blogs
+      - Developing and maintaining LAMP infrastructure and a network of more than 30 WordPress websites
+      - Developing WordPress plugins
+      - Automating operations and implementing continuous integration workflows
+      - Managing SEO and content for AdSense-supported blogs
 
   - company: Zip Progetti
     company_description: >
-      Communication agency specialized in radio advertising, with a press office producing audio-visual content on local news.
-    role: Technician / Audio Engeneer
+      A communication agency specializing in radio advertising, with a press
+      office producing audiovisual content for local news.
+    role: Technician / Audio Engineer
     period: Sep 2004 - Sep 2008
-    location: "Turin - Italy"
+    location: "Turin, Italy"
     industry: "Communication Technology"
     bullet_points:
-      - Developing and maintaining of audio and video streaming equipment
-      - Setup and configuration of web-radio software integrated with website
-      - Net infrastructure setup and maintenance
-      - Development of a multimedia distribution system
-      - Producer and sound engineer
+      - Setting up and maintaining audio and video streaming equipment
+      - Configuring web radio software and integrating it with websites
+      - Setting up and maintaining network infrastructure
+      - Developing a multimedia distribution system
+      - Working as a producer and sound engineer
 
   - company: "MT-Lab.org"
     company_description:
-    role: associate
+    role: Associate
     period: 2000 - 2009
-    location: "Turin - Italy"
+    location: "Turin, Italy"
     industry: "Technoculture"
     bullet_points:
-      - Development, maintenance and SEO for websites and blogs
-      - Linux Server admin
-      - Good knowledge of Wordpress CMS and its APIs
-      - Extended experience in developing PHP applications
-      - Excellent knowledge of SEO techniques and web-marketing
-      - Technical organization for events such as LAN-parties and conferences.
+      - Developing and maintaining PHP applications, websites and blogs
+      - Administering Linux servers
+      - Working with WordPress and its APIs
+      - Applying SEO and web marketing techniques
+      - Coordinating technical operations for LAN parties and conferences
 
   - company: NGI / GamesNet
     company_description:
-    role: volunteer
+    role: Volunteer
     period: 2000 - 2009
-    location: "Milan - Italy"
-    industry: "E-Gaming"
+    location: "Milan, Italy"
+    industry: "Gaming"
     bullet_points:
-      - "Development and maintenance Gameservers Starsiege: Tribes"
-      - Organization tournaments and LAN-party
-      - Linux Server admin
-      - Design and Development of XetBot, an irc bot for gamers
-      - Excellent knowledge of HTML
-      - Experience developing PHP applications
-      - Technical organization of lan parties and tournaments
-      - Excellent knowledge of Java, in particular jConnector
-      - Experience in remote management of systems Gentoo and Debian
+      - "Setting up and maintaining game servers for Starsiege: Tribes"
+      - Organizing tournaments and LAN parties, including technical operations
+      - Remotely administering Gentoo and Debian Linux systems
+      - Designing and developing XetBot, an IRC bot for gamers
+      - Developing web applications with HTML and PHP
+      - Working with Java and jConnector
 ---

@@ -8,10 +8,10 @@ quickfacts:
     value: DevOps Manager at <a href="https://dmind.it" target="_blank" rel="noopener noreferrer"><strong>DMIND</strong></a>
   - icon: graduation-cap
     title: Certification
-    value: Cybersecurity Practioner by <a href="https://isco-sc.it/" target="_blank" rel="noopener noreferrer">ISCO</a>
+    value: Cybersecurity Practitioner by <a href="https://isco-sc.it/" target="_blank" rel="noopener noreferrer">ISCO</a>
   - icon: award
-    title: Recent Achievement
-    value: Integrated generative AI in e-commerce product management
+    title: Current Focus
+    value: AI-assisted engineering with pi, pi-web and OpenAI
   - icon: language
     title: Languages
     value: |
@@ -22,38 +22,63 @@ quickfacts:
     value: |
       - 👨‍🍳 Cooking
       - 🥁 Drumming
-      - 🏍️ Motorbike
+      - 🏍️ Motorcycling
       - 🎮 Gaming
       - 🎯 Sport Shooting
 
 intro: >-
-  Hi! my name is **Emanuele** but everybody calls me **Tex** or **Setola**.
-  
-  
-  I'm a **DevOps Manager** and **System Architect** with a particular 
-  focus on **Cyber Security**; I was a **Web Developer** and an **IT Manager**.
+  Hi, I'm **Emanuele**, usually known as **Tex** or **Setola**.
 
 
-passion_title: "What I'm passionate about"
+  I'm a **DevOps Manager** and **System Architect** with a background in
+  **web development** and **IT management**, and a strong focus on **cybersecurity**.
+
+
+  I connect application code, infrastructure and operations to build systems
+  that are easier to deploy, maintain and trust.
+
+
+passion_title: "Curiosity, with a practical purpose"
 passion_text: >-
-  Technology is both the key point of my professional career 
-  and my oldest hobby and of course one **passion** that takes me over the years.
+  Technology has been both my profession and my longest-running hobby.
   
   
-  I like **Linux**, **OpenSource**, **Arduino** and **Raspberry PI** and **Kubernetes**
+  I enjoy understanding how things work, connecting them and automating
+  the repetitive parts. **Linux**, **open source**, **Kubernetes**,
+  **Arduino** and **Raspberry Pi** keep giving me reasons to experiment.
+
+
+  Apparently, a working system is also an invitation to build something else.
 
 mix: >-
-  I've started developing applications in early 2000, with languages like **C++** and **Java**. 
-  Then I've followed the web standard with **PHP** and **Node**, with a little trip to **GoLang**.
+  I've been building software since the early 2000s, starting with **C++** and
+  **Java**, moving into **PHP** and **Node.js**, and exploring **Go** along the way.
 
 
-  I've always been fascinated by the potential of the Internet, a passion that led me to face **either technical** or **design and marketing** topics.
+  My work spans e-commerce, hospitality and communication technology, connecting
+  engineering decisions with the people and businesses they serve.
 
 
-  I also developed a strong interest in **automation** and technology interactions with the physical world while exploring micro-controllers, IoT and CNC stuff
+  Today, **AI-assisted engineering** is another part of that toolkit. I run
+  **pi** and **pi-web** on a virtual machine connected to **OpenAI**, keeping
+  projects in a remote development environment I can work with from different
+  devices.
+
+  My work in progress includes this website and three personal PWAs:
+  [Shoot Log](https://github.com/setola/shoot-log) for IPSC performance tracking,
+  [Evolta Casa](https://github.com/setola/evolta-casa) for sizing and estimating
+  the cost of home solar installations, and
+  [Costo Auto Italia](https://github.com/setola/costo-auto-italia) for comparing
+  petrol, diesel and electric car costs.
+
+
+  My interest in automation also extends beyond software, into
+  **microcontrollers**, **IoT** and **CNC**. Sometimes the most satisfying
+  output is something that actually moves.
 
 
 personal: >-
-  Outside work, I enjoy **riding my motorbike**, **cooking**, **playing drums** and **tactical games**. 
+  Away from the keyboard, I enjoy **riding my motorbike**, **cooking**,
+  **playing drums**, **gaming** and **sport shooting**.
 
 ---
