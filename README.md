@@ -114,9 +114,10 @@ The test server publishes no host port, receives no Pexels key and renders to
 `public/`, which would overwrite development HTML and its Pexels configuration.
 Compose, not Playwright, manages the test server lifecycle.
 
-The 12 Chromium checks cover desktop/mobile layouts, light/dark mode, navigation,
-modal opacity/dismissal, docs and the 404 page. External services are blocked or
-stubbed: CDN availability, live Pexels responses, animation playback, contact
+The 16 Chromium checks cover desktop/mobile layouts, light/dark mode, navigation,
+modal opacity/dismissal, article width, card-header image sizing, docs and the 404 page.
+External services are blocked or stubbed: CDN availability, live Pexels responses,
+animation playback, contact
 submissions and embedded video playback are not part of these deterministic tests.
 Artifacts appear under `src/emanueletessore.com/test-results/` and are ignored.
 

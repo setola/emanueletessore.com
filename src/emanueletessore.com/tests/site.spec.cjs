@@ -78,6 +78,40 @@ test('about modal opacity, open and Escape close', async ({ page }) => {
   await expect(modal).toBeHidden();
 });
 
+test('article uses the available page width on desktop and stays within mobile viewport', async ({ page }) => {
+  await page.goto('/docs/troubleshoot/kubernetes/cilium-network-timeout/');
+  const container = page.locator('main section > div').first();
+  const bounds = await container.boundingBox();
+  const viewport = page.viewportSize();
+  expect(bounds.width).toBeCloseTo(Math.min(viewport.width, 1280), 0);
+  const content = container.locator('.prose');
+  const contentBounds = await content.boundingBox();
+  const horizontalPadding = await container.evaluate(el => {
+    const style = getComputedStyle(el);
+    return parseFloat(style.paddingLeft) + parseFloat(style.paddingRight);
+  });
+  expect(contentBounds.width).toBeCloseTo(bounds.width - horizontalPadding, 0);
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1)).toBe(true);
+});
+
+test('list featured image fills its card header without internal padding', async ({ page }) => {
+  // A deterministic local response exercises the actual image element, not a failed CDN load.
+  await page.route('https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/**', route => route.fulfill({
+    contentType: 'image/svg+xml',
+    body: '<svg xmlns="http://www.w3.org/2000/svg" width="800" height="400" viewBox="0 0 800 400"><rect width="800" height="400" fill="#287b9c"/></svg>',
+  }));
+  await page.goto('/docs/');
+  const image = page.locator('.project-card img').first();
+  await expect(image).toBeVisible();
+  await expect(image).toHaveCSS('padding', '0px');
+  await expect.poll(() => image.evaluate(el => el.complete && el.naturalWidth > 0)).toBe(true);
+  const imageBounds = await image.boundingBox();
+  const headerBounds = await image.locator('..').boundingBox();
+  expect(imageBounds.width).toBeCloseTo(headerBounds.width, 0);
+  expect(imageBounds.height).toBeCloseTo(256, 0);
+  expect(imageBounds.height).toBeCloseTo(headerBounds.height, 0);
+});
+
 for (const path of ['/docs/', '/docs/troubleshoot/kubernetes/cilium-network-timeout/', '/404.html']) {
   test(`renders ${path}`, async ({ page }) => {
     const response = await page.goto(path);
@@ -85,6 +119,13 @@ for (const path of ['/docs/', '/docs/troubleshoot/kubernetes/cilium-network-time
     await expect(page.locator('body')).toHaveCSS('visibility', 'visible');
     await expect(page.locator('main')).toBeVisible();
     await expect(page.locator('main h1').first()).toBeVisible();
+    if (path === '/docs/') {
+      const intro = page.locator('main .markdown-content').first();
+      await expect(intro).toHaveCSS('max-width', 'none');
+      const introBounds = await intro.boundingBox();
+      const gridBounds = await page.locator('main .grid').first().boundingBox();
+      expect(introBounds.width).toBeCloseTo(gridBounds.width, 0);
+    }
     const brokenImages = await page.locator('main img').evaluateAll(images =>
       images.filter(img => new URL(img.src).origin === location.origin && img.complete && img.naturalWidth === 0)
         .map(img => img.src));
