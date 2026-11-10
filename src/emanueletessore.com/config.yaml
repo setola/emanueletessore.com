@@ -1,5 +1,5 @@
 baseURL: https://www.emanueletessore.com
-languageCode: en-us
+locale: en-US
 title: Emanuele Tessore
 theme: careercanvas
 defaultContentLanguage: en
@@ -100,7 +100,6 @@ params:
   pexels:
     queries:
       - universe solar systems nasa pictures
-      - structural long span bridges
       - nebula nasa pictures
   color_palettes:
     palette:
@@ -147,13 +146,22 @@ params:
 outputs:
   home:
     - HTML
-    - JSON
     - RSS
   section:
     - HTML
-    - JSON
 build:
-  writeStats: true
+  buildStats:
+    enable: true
+  cachebusters:
+    - source: 'assets/notwatching/hugo_stats\.json'
+      target: css
+module:
+  mounts:
+    - source: assets
+      target: assets
+    - source: hugo_stats.json
+      target: assets/notwatching/hugo_stats.json
+      disableWatch: true
 security:
   enableInlineShortcodes: false
   exec:
@@ -161,7 +169,8 @@ security:
       - ^(dart-)?sass(-embedded)?$
       - ^go$
       - ^npx$
-      - ^postcss$
+      - ^node$
+      - ^tailwindcss$
       - git
     osEnv:
       - (?i)^((HTTPS?|NO)_PROXY|PATH(EXT)?|APPDATA|TE?MP|TERM|GO\w+|(XDG_)?CACHE_HOME|YARN_CACHE_FOLDER)$
@@ -177,7 +186,7 @@ security:
 languages:
   en:
     contentDir: content/en
-    languageName: English
+    label: English
     weight: 1
     params:
       resume_url: https://docs.google.com/document/d/1I-fZ6CrUhZ_fn8XalgClz-EFNdPUl5-SOTSK_j563AY/export?format=pdf&tab=t.0
@@ -197,11 +206,3 @@ languages:
         - Kubernetes Expert
         - Open Source Advocate
         - Automation Specialist
-
-    hero:
-      title: Hi! I'm Emanuele
-      subtitle: but everybody calls me Tex or Setola
-      description:
-        I'm a DevOps engineer, I was a web developer and I'll forever be a
-        tech enthusiast.
-      image: /images/profile.jpg

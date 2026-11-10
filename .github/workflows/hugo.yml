@@ -1,67 +1,93 @@
 name: Hugo Deployment to GitHub Pages
+
 on:
   push:
-    branches: [ main ]
-  # Allows you to run this workflow manually from the Actions tab
+    branches: [main]
+  pull_request:
+    branches: [main]
   workflow_dispatch:
 
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
   contents: read
-  pages: write
-  id-token: write
 
-# Allow one concurrent deployment
 concurrency:
-  group: "pages"
+  group: pages-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
-  build:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+  checks:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@main
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           submodules: recursive
-      
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '18'
-          cache: 'npm'
-          cache-dependency-path: './src/emanueletessore.com/package-lock.json'
-      
+
+      - name: Prepare bind mounts
+        run: |
+          mkdir -p .docker/hugo-node_modules .docker/test-site-node_modules .docker/playwright-node_modules
+          printf 'LOCAL_UID=%s\nLOCAL_GID=%s\n' "$(id -u)" "$(id -g)" >> "$GITHUB_ENV"
+
+      - name: Check development and test isolation
+        run: |
+          docker compose --profile '*' config --format json |
+            docker compose run --rm -T --no-deps --workdir /project tools node tests/compose-isolation.cjs
+
       - name: Install dependencies
-        run: |
-          cd ${{ github.workspace }}/src/emanueletessore.com
-          npm ci
-      
-      - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v3
+        run: docker compose run --rm tools npm ci
+
+      - name: Lint CSS
+        run: docker compose run --rm tools npm run lint:css
+
+      - name: Browser smoke tests
+        run: docker compose -p emanueletessore-site-tests run --rm test
+
+      - name: Remove test services
+        if: always()
+        run: docker compose -p emanueletessore-site-tests --profile test down --remove-orphans
+
+      - name: Check production build without secrets
+        run: docker compose run --rm tools npm run build
+
+  deploy:
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    needs: checks
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
-          # Pin Hugo: newer releases change the Node/PostCSS security requirements.
-          hugo-version: '0.152.2'
-          extended: true
-      
-      - name: Building static site
+          submodules: recursive
+
+      - name: Prepare bind mounts
+        run: |
+          mkdir -p .docker/hugo-node_modules
+          printf 'LOCAL_UID=%s\nLOCAL_GID=%s\n' "$(id -u)" "$(id -g)" >> "$GITHUB_ENV"
+
+      - name: Install dependencies
+        run: docker compose run --rm tools npm ci
+
+      # Only this environment-scoped job receives the production Pexels key.
+      - name: Build production site
         env:
-          HUGO_PARAMS_PEXELSAPIKEY: ${{ secrets.PEXELS_API_KEY }}
-        run: |
-          cd ${{ github.workspace }}/src/emanueletessore.com
-          hugo --environment production --destination public --minify
-      
+          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+        run: docker compose run --rm tools npm run build
+
       - name: Setup Pages
-        uses: actions/configure-pages@main
-      
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@main
+        uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d # v6.0.0
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
         with:
-          path: './src/emanueletessore.com/public'
-      
+          path: src/emanueletessore.com/public
+
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@main
+        uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346 # v5.0.1

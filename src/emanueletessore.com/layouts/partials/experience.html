@@ -12,8 +12,8 @@
       
         {{/* Build language → resume_url lookup map */}}
         {{ $resumeMap := dict }}
-        {{ range .Site.Languages }}
-          {{ $lang := .Lang }}
+        {{ range hugo.Sites }}
+          {{ $lang := .Language.Lang }}
           {{ with .Params.resume_url }}
             {{ $resumeMap = merge $resumeMap (dict $lang .) }}
           {{ end }}
@@ -64,7 +64,7 @@
               <div class="max-w-sm w-full">
                 <div class="company-card bg-bg dark:bg-bg p-6 rounded-lg shadow-lg border border-border-primary dark:border-border-primary card-hover">
                   {{ $logoKey := or $exp.company_key (urlize $exp.company) }}
-                  {{ $logo := index site.Data.company_logos $logoKey }}
+                  {{ $logo := index hugo.Data.company_logos $logoKey }}
                   {{ $logoDir := printf "static/images/companies/%s" $logoKey }}
                   {{ $imgExt := `(?i)\.(png|jpe?g|webp|svg|gif)$` }}
                   <h3 class="text-xl font-heading font-bold text-text-primary dark:text-text-primary mb-2">
@@ -99,9 +99,10 @@
                   {{ with $gallery }}
                   <div class="mb-3 flex w-full flex-nowrap gap-2 overflow-x-auto pb-1">
                     {{ range . }}
-                    <div class="flex h-24 w-24 flex-shrink-0 items-center justify-center overflow-hidden rounded-md bg-white p-1.5">
+                    {{ $imageURL := printf "/images/companies/%s/%s" $logoKey .Name }}
+                    <div class="flex h-24 w-24 shrink-0 items-center justify-center overflow-hidden rounded-md bg-white p-1.5">
                       <img
-                        src="{{ printf "/images/companies/%s/%s" $logoKey .Name }}"
+                        src="{{ $imageURL }}"
                         alt="{{ $exp.company }}: {{ .Name }}"
                         loading="lazy"
                         decoding="async"
@@ -161,7 +162,7 @@
                       <h5 class="text-lg font-semibold text-text-primary dark:text-text-primary">{{ .title }}</h5>
                     </div>
                     {{ with .period }}
-                    <div class="inline-flex items-center bg-gradient-primary text-white px-3 py-1 rounded-full text-xs font-medium shadow w-fit">
+                    <div class="inline-flex items-center bg-gradient-primary text-white px-3 py-1 rounded-full text-xs font-medium shadow-sm w-fit">
                       <i class="fas fa-calendar-alt mr-2"></i>{{ . }}
                     </div>
                     {{ end }}
@@ -173,7 +174,7 @@
                   <ul class="space-y-3 text-gray-700 dark:text-text-secondary">
                     {{ range .bullet_points }}
                     <li class="flex items-start">
-                      <i class="fas fa-check-circle text-second mr-3 mt-1 flex-shrink-0"></i>
+                      <i class="fas fa-check-circle text-second mr-3 mt-1 shrink-0"></i>
                       <div>{{ . | markdownify }}</div>
                     </li>
                     {{ end }}
@@ -190,7 +191,7 @@
                 <ul class="space-y-3 text-gray-700 dark:text-text-secondary">
                   {{ range $exp.bullet_points }}
                   <li class="flex items-start">
-                    <i class="fas fa-check-circle text-second mr-3 mt-1 flex-shrink-0"></i>
+                    <i class="fas fa-check-circle text-second mr-3 mt-1 shrink-0"></i>
                     <div>{{ . | markdownify }}</div>
                   </li>
                   {{ end }}

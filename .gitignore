@@ -2,6 +2,12 @@
 public/
 resources/
 .hugo_build.lock
+/src/emanueletessore.com/hugo_stats.json
+
+# Local environment and secrets
+/.env
+/.env.*
+!/.env.example
 
 # IDE
 .vscode/
@@ -20,4 +26,14 @@ Thumbs.db
 *.tmp
 *.temp
 
+# Local planning notes/specifications (not the site's published content/en/docs)
+/docs/
+
 src/**/node_modules/
+
+# Bind-mounted container dependency caches
+.docker/
+
+# Browser test artifacts
+test-results/
+playwright-report/

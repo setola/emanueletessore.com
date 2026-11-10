@@ -1,3 +1,4 @@
 [submodule "src/emanueletessore.com/themes/careercanvas"]
 	path = src/emanueletessore.com/themes/careercanvas
-	url = https://github.com/felipecordero/careercanvas.git
+	url = https://github.com/setola/careercanvas.git
+	branch = feat/tailwind-v4

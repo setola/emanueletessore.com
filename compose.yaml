@@ -1,0 +1,88 @@
+name: emanueletessore-site
+
+# All source files and dependency caches use bind mounts. No custom image/build.
+x-hugo: &hugo
+  image: ghcr.io/gohugoio/hugo:v0.169.0
+  user: "${LOCAL_UID:-1000}:${LOCAL_GID:-1000}"
+  init: true
+  working_dir: /project/src/emanueletessore.com
+  # Bypass the image entrypoint's automatic `npm install`; use our lockfile.
+  entrypoint: []
+  environment:
+    HOME: /tmp
+    HUGO_CACHEDIR: /tmp/hugo-cache
+    HUGO_PARAMS_PEXELSAPIKEY: "${PEXELS_API_KEY:-}"
+  volumes:
+    - type: bind
+      source: .
+      target: /project
+    - type: bind
+      source: ./.docker/hugo-node_modules
+      target: /project/src/emanueletessore.com/node_modules
+
+services:
+  tools:
+    <<: *hugo
+    profiles: [cli]
+    command: [hugo, --help]
+
+  serve:
+    <<: *hugo
+    ports:
+      - "${HUGO_PORT:-1313}:1313"
+    command: [sh, -c, "npm ci && exec hugo server --bind 0.0.0.0 --port 1313 --baseURL http://localhost:$${HUGO_PUBLIC_PORT:-1313}"]
+    environment:
+      HOME: /tmp
+      HUGO_CACHEDIR: /tmp/hugo-cache
+      HUGO_PARAMS_PEXELSAPIKEY: "${PEXELS_API_KEY:-}"
+      HUGO_PUBLIC_PORT: "${HUGO_PORT:-1313}"
+      HUGO_BUILDDRAFTS: "${HUGO_BUILDDRAFTS:-false}"
+      HUGO_BUILDFUTURE: "${HUGO_BUILDFUTURE:-false}"
+
+  test-site:
+    <<: *hugo
+    profiles: [test]
+    environment:
+      HOME: /tmp
+      HUGO_CACHEDIR: /tmp/hugo-cache
+      # Browser smoke tests intentionally never receive the Pexels key.
+      HUGO_PARAMS_PEXELSAPIKEY: ""
+    volumes:
+      - type: bind
+        source: .
+        target: /project
+      - type: bind
+        source: ./.docker/test-site-node_modules
+        target: /project/src/emanueletessore.com/node_modules
+    # Both servers bind the same source tree. Never overwrite development public/.
+    command: [sh, -c, "npm ci && exec hugo server --environment production --bind 0.0.0.0 --port 17893 --destination /tmp/hugo-test-public --disableFastRender --disableLiveReload"]
+    healthcheck:
+      test: [CMD, node, -e, "require('http').get('http://127.0.0.1:17893/', r => process.exit(r.statusCode === 200 ? 0 : 1)).on('error', () => process.exit(1))"]
+      interval: 2s
+      timeout: 5s
+      retries: 30
+      start_period: 10s
+
+  test:
+    profiles: [test]
+    image: mcr.microsoft.com/playwright:v1.65.0-noble
+    user: "${LOCAL_UID:-1000}:${LOCAL_GID:-1000}"
+    init: true
+    shm_size: 1gb
+    working_dir: /project/src/emanueletessore.com
+    environment:
+      HOME: /tmp
+      PLAYWRIGHT_BASE_URL: http://test-site:17893
+      CI: "${CI:-}"
+    volumes:
+      - type: bind
+        source: .
+        target: /project
+      # Ubuntu/glibc dependencies must not overwrite Hugo's Alpine/musl ones.
+      - type: bind
+        source: ./.docker/playwright-node_modules
+        target: /project/src/emanueletessore.com/node_modules
+    depends_on:
+      test-site:
+        condition: service_healthy
+    command: [sh, -c, "npm ci && npm test"]
