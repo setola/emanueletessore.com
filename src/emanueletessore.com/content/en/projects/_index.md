@@ -2,7 +2,7 @@
 title: Projects & Contributions
 description: Projects I've contributed to
 type: list
-draft: true
+draft: false
 ---
 
 A selection of projects I've contributed to, spanning web platforms, infrastructure tooling, and automation workflows. 

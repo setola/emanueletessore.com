@@ -49,9 +49,9 @@ menu:
     - name: Contact
       url: /#contact
       weight: 60
-    # - name: Projects
-    #   url: /projects/
-    #   weight: 70
+    - name: Projects
+      url: /projects/
+      weight: 70
     - name: Docs
       url: /docs/
       weight: 80
