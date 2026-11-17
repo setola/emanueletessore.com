@@ -10,6 +10,10 @@ try {
   process.exit(1);
 }
 const services = model.services;
+const packageJson = require('../src/emanueletessore.com/package.json');
+const playwrightVersion = packageJson.devDependencies['@playwright/test'];
+assert.ok(services.test.image === `mcr.microsoft.com/playwright:v${playwrightVersion}-noble`,
+  'The Playwright Docker image must match the pinned @playwright/test version');
 const defaults = Object.keys(services).filter(name => !services[name].profiles?.length);
 assert.ok(defaults.length === 1 && defaults[0] === 'serve',
   'A default compose up must start only the development server');

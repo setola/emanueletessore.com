@@ -65,7 +65,7 @@ services:
 
   test:
     profiles: [test]
-    image: mcr.microsoft.com/playwright:v1.65.0-noble
+    image: mcr.microsoft.com/playwright:v1.65.1-noble
     user: "${LOCAL_UID:-1000}:${LOCAL_GID:-1000}"
     init: true
     shm_size: 1gb
